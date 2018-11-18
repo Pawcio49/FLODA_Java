@@ -61,7 +61,6 @@
                                  </content>
                             </TitledPane>
                             <TitledPane fx:id="StatESP" text="Statistics about four FLODA">
-
                             </TitledPane>
                             <TitledPane fx:id="adminfx" text="SuperAdmin options" />
                           </panes>

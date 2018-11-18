@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/register/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/screen/register.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainWindow/MainControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainWindow/MainControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/screen/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/screen/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainWindow/MainControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/screen/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/screen/menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/screen/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screen/mainWindow.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -113,24 +113,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainWindow.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/screen/mainWindow.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="MainControler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MainWindow/MainControler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+            <state relative-caret-position="576">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3072#3080#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainControler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MainWindow/MainControler.java">
+      <file leaf-file-name="logowanie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Logowanie/logowanie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="85">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/MenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="78" column="37" lean-forward="true" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/screen/menu.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="register.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/screen/register.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/register/RegisterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -171,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/src/sample/menu.fxml" />
         <option value="$PROJECT_DIR$/src/spring/Info.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
@@ -209,7 +258,6 @@
         <option value="$PROJECT_DIR$/src/main/java/WEB/Web.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logowanie/logowanie.java" />
         <option value="$PROJECT_DIR$/src/main/java/Statistics/Statistics.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Statistics/StatWindowControler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Statistics/Thr.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml" />
@@ -221,6 +269,9 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainWindow/MainControler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/screen/mainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/screen/menu.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/screen/register.fxml" />
       </list>
     </option>
   </component>
@@ -268,7 +319,9 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -277,48 +330,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
+      <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="dataView" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="MainWindow" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="sample" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="screen" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="spring" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="Floda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Floda" type="e9137016:NonAndroidModuleNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -374,6 +396,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Floda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Floda" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,12 +449,43 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
+      <pane id="Scope" />
+      <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="Floda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Floda" type="e9137016:NonAndroidModuleNode" />
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="dataView" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="MainWindow" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="sample" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="screen" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="spring" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -612,7 +673,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4993573" weight="0.3293011" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.6703755" visible="true" weight="0.17803837" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.6703755" visible="true" weight="0.17963752" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.0836887" />
       <window_info id="UI Designer" order="1" />
@@ -662,14 +723,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.sql/java/sql/ResultSet.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/spring-jdbc-4.3.18.RELEASE.jar!/org/springframework/jdbc/datasource/DriverManagerDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.4.RELEASE/spring-jdbc-5.0.4.RELEASE-sources.jar!/org/springframework/jdbc/datasource/DriverManagerDataSource.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/MainWindow/MainSplitPane.java" />
     <entry file="file://$PROJECT_DIR$/Floda.iml">
@@ -769,37 +822,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/motyw_kolor.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/dataView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/menu.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/screen/Web.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/Logowanie.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Statistics/Stat.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -837,52 +866,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/screen/statistics.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logowanie/logowanie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/JdbcCustomerDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2567">
           <caret line="159" column="14" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MainWindow/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/FlodaConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="104" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -901,22 +895,100 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/screen/mainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+        <state relative-caret-position="538">
+          <caret line="56" column="56" lean-forward="true" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/Logowanie.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logowanie/logowanie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainWindow/MainControler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="576">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3072#3080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/dataView.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MainWindow/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/FlodaConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="78" column="37" lean-forward="true" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/register/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/menu.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/register.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

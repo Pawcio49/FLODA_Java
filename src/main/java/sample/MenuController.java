@@ -2,11 +2,11 @@ package sample;
 
 import MainWindow.MainWindow;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,6 +14,7 @@ import spring.CustomerDAO;
 import spring.Info;
 
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 public class MenuController extends Thread {
@@ -28,7 +29,8 @@ public class MenuController extends Thread {
     @FXML
     private PasswordField txtpasswd;
     private MainWindow mainWindow;
-
+    @FXML
+    Button buttreg;
 
     @FXML
     void initialize() {
@@ -66,6 +68,17 @@ public class MenuController extends Thread {
                 errorlabel.setText("Nie uzupelniles pol!");
             }
         }catch (Exception e){
+            }
+        });
+
+        buttreg.setOnAction(actionEvent -> {
+            try {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/register.fxml"));
+                Stage stage = (Stage) txtpasswd.getScene().getWindow();
+                stage.setScene(new Scene(root));
+            } catch (IOException e) {
+                e.printStackTrace();
+
             }
         });
     }
