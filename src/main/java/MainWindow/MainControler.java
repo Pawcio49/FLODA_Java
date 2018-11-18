@@ -50,8 +50,10 @@ public class MainControler {
     MenuItem logOut;
     @FXML
     Main menu;
+    /*@FXML
+    AnchorPane stats;*/
     @FXML
-    AnchorPane stats;
+    TitledPane StatESP;
 
 
     @FXML
@@ -116,6 +118,12 @@ public class MainControler {
         int number=Plant.get(0).getNumber();
         //int number=Plant[0].getNumber();
 
+        ScrollPane sp=new ScrollPane();
+        StatESP.setContent(sp);
+        AnchorPane stats=new AnchorPane();
+        sp.setContent(stats);
+        sp.setFitToWidth(true);
+        sp.setFitToHeight(true);
 
         for (int i = 0;i<number; i++) {
 
@@ -152,6 +160,7 @@ public class MainControler {
                 });
 
                 stats.getChildren().add(button.get(i));
+
 
 
         }
