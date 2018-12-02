@@ -30,7 +30,7 @@
             <Image url="@../motyw_kolor.png" />
          </image>
       </ImageView>
-      <Label fx:id="errorlabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="92.0" layoutY="309.0" prefHeight="17.0" prefWidth="155.0" textAlignment="RIGHT" textFill="RED" />
+      <Label fx:id="errorlabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="26.0" layoutY="343.0" prefHeight="17.0" prefWidth="155.0" textAlignment="RIGHT" textFill="RED" />
       <Button fx:id="buttreg" defaultButton="true" layoutX="172.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #62c145;" text="REGISTER" />
    </children>
 </AnchorPane>

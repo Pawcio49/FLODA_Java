@@ -45,6 +45,7 @@ public class MenuController extends Thread {
                 if(dd.getblocked()){
                     errorlabel.setText("Your account is blocked");
                 }else {
+
                     switch (dd.getEmail()) {
                         case "err":
                             errorlabel.setText("Blad polaczenia z internetem!");

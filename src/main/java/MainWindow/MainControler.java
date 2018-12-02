@@ -25,6 +25,7 @@ import java.util.List;
 
 public class MainControler {
     ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring-Module.xml");
+    CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
     Info info;
     private int line;
 
@@ -109,7 +110,7 @@ public class MainControler {
         });
 
 
-        CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
+
         List<Button> button = new ArrayList<Button>();
 
         ArrayList<FlodaConnection> Plant = customerDAO.getFlodaConnection(100, info.getID());
