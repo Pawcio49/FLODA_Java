@@ -19,8 +19,13 @@
         <module name="Floda" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="10">
       <module name="Floda" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Floda" options="-parameters" />
+    </option>
   </component>
 </project>

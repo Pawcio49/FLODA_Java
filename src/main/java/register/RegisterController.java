@@ -7,7 +7,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.CustomerDAO;
 
-public class RegisterController {
+import java.io.IOException;
+
+public class RegisterController{
 
     ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring-Module.xml");
     CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
@@ -32,8 +34,13 @@ public class RegisterController {
         register.setOnAction(actionEvent -> {
 
             if(!nick.getText().equals("") && !name.getText().equals("") && !surname.getText().equals("") && !email.getText().equals("") && !password.getText().equals("") && password.getText().equals(r_password.getText())){
-               customerDAO.insert(nick.getText(), name.getText(), surname.getText(), email.getText(), password.getText());
-
+               //customerDAO.insert(nick.getText(), name.getText(), surname.getText(), email.getText(), password.getText());
+                PHPcontroller phpController = new PHPcontroller();
+                try {
+                    System.out.println(phpController.signup(nick.getText(), name.getText(), surname.getText(), email.getText(), password.getText()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
