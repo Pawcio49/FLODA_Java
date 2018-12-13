@@ -42,29 +42,32 @@ public class MenuController extends Thread {
             if (!txtnick.getText().isEmpty() && !txtpasswd.getText().isEmpty()) {
                 CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
                 Info dd = new Info(customerDAO.findByCustomerId(txtnick.getText(), txtpasswd.getText()));
+                System.out.println(dd.getEmail());
                 if(dd.getblocked()){
-                    errorlabel.setText("Your account is blocked");
+                    errorlabel.setText("Twoje konto jest zablokowane");
                 }else {
 
-                    switch (dd.getEmail()) {
-                        case "err":
-                            errorlabel.setText("Blad polaczenia z internetem!");
-                            break;
-                        case "erro":
-                            errorlabel.setText("Blad logowania!");
-                            break;
+                    if(dd.getEmail().equals("err")) {
 
-                        default:
-                            mainWindow = new MainWindow(dd);
+                        errorlabel.setText("Blad polaczenia z internetem!");
+
+                    }
+                    else if (dd.getEmail().equals("erro")) {
+
+                        errorlabel.setText("Blad logowania!");
+                    }
+                    else{
+                        try {
+                        mainWindow = new MainWindow(dd);
                             Stage stage = (Stage) txtpasswd.getScene().getWindow();
-                            try {
+
                                 mainWindow.start(stage);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
-                            break;
+
                     }
-                }
+                    }
             } else {
                 errorlabel.setText("Nie uzupelniles pol!");
             }

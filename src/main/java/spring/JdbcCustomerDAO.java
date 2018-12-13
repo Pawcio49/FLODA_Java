@@ -89,11 +89,11 @@ public class JdbcCustomerDAO implements CustomerDAO {
                         );
                     }
 
-                }
-            } else {
-                return new Info(
-                        "erro"
-                );
+                }else {
+                    return new Info(
+                            "erro"
+                    );
+                 }
 
             }
             rs.close();

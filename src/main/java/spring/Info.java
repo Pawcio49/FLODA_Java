@@ -21,6 +21,7 @@ public class Info {
     }
     public Info(String Email) {
         this.Email=Email;
+        this.blocked=false;
     }
 
     public Info(Info info) {
