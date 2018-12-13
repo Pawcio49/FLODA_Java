@@ -49,12 +49,12 @@ public class MenuController extends Thread {
 
                     if(dd.getEmail().equals("err")) {
 
-                        errorlabel.setText("Blad polaczenia z internetem!");
+                        errorlabel.setText("Bląd polaczenia z internetem!");
 
                     }
                     else if (dd.getEmail().equals("erro")) {
 
-                        errorlabel.setText("Blad logowania!");
+                        errorlabel.setText("Bląd logowania!");
                     }
                     else{
                         try {
