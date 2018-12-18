@@ -1,5 +1,6 @@
 package spring;
 
+import Addflower.DateofChoiceBox;
 import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
@@ -10,20 +11,18 @@ import java.util.ArrayList;
 public class JdbcCustomerDAO implements CustomerDAO {
     private DriverManagerDataSource ds;
 
-    public void insert(String nick, String name, String surname, String email, String passwd) {
+    public String insert(String whose, String name) {
 
-        String sql = "INSERT INTO floda_user_detail " +
-                "(Nick, Email, passwd, Name, Surname) VALUES (?, ?, md5(?), ?, ?)";
+        String sql = "INSERT INTO FLODA_connections " +
+                "(whose, Name, ID ) VALUES (?, ?, ?)";
         Connection conn = null;
 
         try {
             conn = ds.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, nick);
-            ps.setString(2, email);
-            ps.setString(3, passwd);
-            ps.setString(4, name);
-            ps.setString(5, surname);
+            ps.setString(1, whose);
+            ps.setString(2, name);
+            ps.setString(3, "11");
 
             ps.executeUpdate();
             ps.close();
@@ -31,8 +30,8 @@ public class JdbcCustomerDAO implements CustomerDAO {
         } catch (SQLTimeoutException f) {
 
         } catch (SQLException e) {
-            System.out.println("You can't register!");
-            throw new RuntimeException(e);
+            return "You can't add flower!";
+
         } finally {
             if (conn != null) {
                 try {
@@ -41,6 +40,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
                 }
             }
         }
+        return "Dodano kwiatka";
     }
 
     public ResultSet getInfoTable(String statement) {
@@ -233,7 +233,86 @@ public class JdbcCustomerDAO implements CustomerDAO {
 
     }
 
+    public  ArrayList<DateofChoiceBox> getData() {
+        String sql = "SELECT Nazwa, ID FROM FLODA_main_database WHERE id_autora = 1";
 
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            int number = 0;
+            ResultSet rs = ps.executeQuery();
+            ArrayList<DateofChoiceBox> customer = new ArrayList<DateofChoiceBox>();
+
+            customer.add(new DateofChoiceBox("Domyslne ustawienia",0));
+            while(rs.next()){
+                    customer.add(new DateofChoiceBox(
+                            rs.getString("Nazwa"),
+                            rs.getInt("ID")
+                    ));
+
+                    number++;
+
+            }
+            customer.get(0).setNumber(number+1);
+            rs.close();
+            ps.close();
+            return customer;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+
+
+    }
+    public  ArrayList<DateofChoiceBox> getData2() {
+        String sql = "SELECT Nazwa, ID FROM FLODA_main_database WHERE id_autora != 1";
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            int number = 0;
+            ResultSet rs = ps.executeQuery();
+            ArrayList<DateofChoiceBox> customer = new ArrayList<DateofChoiceBox>();
+
+            customer.add(new DateofChoiceBox("Ustawienia dodane przez użytkownikow", 0));
+            while (rs.next()) {
+                customer.add(new DateofChoiceBox(
+                        rs.getString("Nazwa"),
+                        rs.getInt("ID")
+                ));
+
+                number++;
+
+            }
+            customer.get(0).setNumber(number + 1);
+            rs.close();
+            ps.close();
+            return customer;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
 }
 
 

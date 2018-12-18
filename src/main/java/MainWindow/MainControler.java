@@ -51,8 +51,8 @@ public class MainControler {
     MenuItem logOut;
     @FXML
     Main menu;
-    /*@FXML
-    AnchorPane stats;*/
+    @FXML
+    Button addbut;
     @FXML
     TitledPane StatESP;
 
@@ -105,6 +105,19 @@ public class MainControler {
                 Stage window = (Stage) web.getScene().getWindow();
                 window.close();
             } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        addbut.setOnAction(actionEvent -> {
+            try {
+                PrintWriter save = new PrintWriter("Plant_ID.txt");
+                save.println(info.getID());
+                save.close();
+                Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/addflower.fxml"));
+                Tab tb2 = new Tab("Dodaj kwiatka", node2);
+                TAB.getTabs().add(tb2);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         });
