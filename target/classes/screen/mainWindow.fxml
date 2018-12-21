@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #1d7c00;" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <MenuBar prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #1d7c00;" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -40,9 +40,9 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane fx:id="MainPane" dividerPositions="0.32" prefHeight="338.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane fx:id="MainPane" dividerPositions="0.25" prefHeight="338.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
-                        <Accordion maxWidth="361.0" minWidth="100.0" prefHeight="333.0" prefWidth="188.0">
+                        <Accordion maxWidth="361.0" minWidth="100.0" prefHeight="386.0" prefWidth="183.0">
                           <panes>
                             <TitledPane fx:id="ConfigESP" alignment="TOP_LEFT" prefHeight="258.0" prefWidth="188.0" text="Configure your FLODA">
                                  <content>
@@ -50,8 +50,8 @@
                                        <content>
                                           <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                              <children>
-                                                <Button fx:id="button" layoutX="68.0" layoutY="14.0" mnemonicParsing="false" text="Baza danych" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                                                <Button fx:id="logowanie" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" text="Logowanie do ESP" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                                                <Button fx:id="butUser" layoutX="68.0" layoutY="14.0" mnemonicParsing="false" text="Ustawienia użytkownika" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                                <Button fx:id="newType" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" text="Nowy gatunek" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
                                                 <Button fx:id="web" layoutX="68.0" layoutY="75.0" mnemonicParsing="false" text="WEB" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
                                                 <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" text="Dodaj kwiatka" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
                                              </children>
@@ -65,7 +65,7 @@
                             <TitledPane fx:id="adminfx" text="SuperAdmin options" />
                           </panes>
                         </Accordion>
-                        <TabPane fx:id="TAB" prefHeight="200.0" prefWidth="492.0" tabClosingPolicy="ALL_TABS" />
+                        <TabPane fx:id="TAB" prefHeight="386.0" prefWidth="660.0" tabClosingPolicy="ALL_TABS" />
                     </items>
                      <opaqueInsets>
                         <Insets />

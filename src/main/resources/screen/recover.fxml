@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recover.Recover">
+   <children>
+      <TextField fx:id="email" layoutX="26.0" layoutY="27.0" prefHeight="25.0" prefWidth="224.0" promptText="Email" style="-fx-background-color: #1d7c00;" />
+      <Button fx:id="sendMail" defaultButton="true" layoutX="9.0" layoutY="62.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="258.0" style="-fx-background-color: #62c145;" text="Wyslij maila z kodem na podany adres e-mail" />
+      <TextField fx:id="kod" layoutX="26.0" layoutY="129.0" prefHeight="25.0" prefWidth="224.0" promptText="Kod" style="-fx-background-color: #1d7c00;" visible="false" />
+      <PasswordField fx:id="newPass" layoutX="26.0" layoutY="232.0" prefHeight="25.0" prefWidth="224.0" promptText="Nowe hasło" style="-fx-background-color: #1d7c00;" visible="false" />
+      <PasswordField fx:id="verPass" layoutX="26.0" layoutY="268.0" prefHeight="25.0" prefWidth="224.0" promptText="Potwierdz haslo" style="-fx-background-color: #1d7c00;" visible="false" />
+      <Button fx:id="verify" defaultButton="true" layoutX="24.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: #62c145;" text="Zweryfikuj kod" visible="false" />
+      <Button fx:id="change" defaultButton="true" layoutX="9.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="258.0" style="-fx-background-color: #62c145;" text="Zmien hasło" visible="false" />
+      <Label fx:id="comMail" layoutX="21.0" layoutY="99.0" textFill="#ff2323" />
+      <Label fx:id="comCode" layoutX="26.0" layoutY="204.0" textFill="#ff2323" />
+      <Label fx:id="comPass" layoutX="26.0" layoutY="346.0" textFill="#ff2323" />
+      <Button fx:id="login" defaultButton="true" layoutX="122.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #62c145;" text="MENU LOGOWANIA" />
+   </children>
+</AnchorPane>

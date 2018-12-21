@@ -19,6 +19,7 @@
             </image>
         </ImageView>
         <Button fx:id="buttreg" defaultButton="true" layoutX="172.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #62c145;" text="REGISTER" />
-      <Label fx:id="errorlabel" layoutX="26.0" layoutY="348.0" textFill="#ff2323" />
+      <Label fx:id="errorlabel" layoutX="26.0" layoutY="373.0" textFill="#ff2323" />
+      <Button fx:id="pass" defaultButton="true" layoutX="26.0" layoutY="338.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #62c145;" text="ODZYSKIWANIE HASŁA" />
     </children>
 </AnchorPane>

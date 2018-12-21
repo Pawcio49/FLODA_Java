@@ -31,6 +31,8 @@ public class MenuController extends Thread {
     private MainWindow mainWindow;
     @FXML
     Button buttreg;
+    @FXML
+    Button pass;
 
     @FXML
     void initialize() {
@@ -77,6 +79,17 @@ public class MenuController extends Thread {
         buttreg.setOnAction(actionEvent -> {
             try {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/register.fxml"));
+                Stage stage = (Stage) txtpasswd.getScene().getWindow();
+                stage.setScene(new Scene(root));
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+        });
+
+        pass.setOnAction(actionEvent -> {
+            try {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/recover.fxml"));
                 Stage stage = (Stage) txtpasswd.getScene().getWindow();
                 stage.setScene(new Scene(root));
             } catch (IOException e) {

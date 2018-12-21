@@ -187,7 +187,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
 
 
     public FlodaLog[] getFlodaLog(int line, int who) {
-        String sql = "SELECT nr_floda, temperature, soil, ph, humidity, sun, date FROM floda_log WHERE nr_floda = " + who + " order by id desc";
+        String sql = "SELECT nr_floda, temperature, soil, humidity, sun, date FROM floda_log WHERE nr_floda = " + who + " order by id desc";
 
         Connection conn = null;
 
@@ -197,7 +197,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
             int number = 0;
             ResultSet rs = ps.executeQuery();
             FlodaLog[] customer = new FlodaLog[line];
-            customer[0]=new FlodaLog(0,0,0,0,0,"0",false);
+            customer[0]=new FlodaLog(0,0,0,0,"0",false);
             for (int i = 0; i < line; i++) {
 
 
@@ -207,10 +207,60 @@ public class JdbcCustomerDAO implements CustomerDAO {
                     customer[i] = new FlodaLog(
                             rs.getInt("temperature"),
                             rs.getInt("soil"),
-                            rs.getInt("ph"),
                             rs.getInt("humidity"),
                             rs.getInt("sun"),
                             rs.getString("date"),
+                            false);
+                    number++;
+                }
+            }
+            customer[0].number = number;
+            rs.close();
+            ps.close();
+            return customer;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
+
+    public FlodaLog[] getFlodaAverage(int line, int who) {
+        String sql = "select * from srednia_dniowa where nr_floda=" + who;
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            int number = 0;
+            ResultSet rs = ps.executeQuery();
+            FlodaLog[] customer = new FlodaLog[line];
+            customer[0]=new FlodaLog(0,0,0,0,"0",false);
+
+            for (int i = 0; i < line; i++) {
+
+
+                if (!rs.next()) {
+                    break;
+                } else {
+                    StringBuilder content = new StringBuilder();
+                    content.append(rs.getString("day"));
+                    content.append(" ");
+                    content.append(rs.getString("month"));
+                    customer[i] = new FlodaLog(
+                            rs.getInt("temp"),
+                            rs.getInt("soil"),
+                            rs.getInt("humidity"),
+                            rs.getInt("sun"),
+                            content.toString(),
                             false);
                     number++;
                 }
@@ -313,6 +363,45 @@ public class JdbcCustomerDAO implements CustomerDAO {
         }
 
     }
+
+    public DataOfUser getDataOfUser(String id) {
+
+        String sql = "SELECT Name, Surname, Nick FROM floda_user_detail WHERE ID = ?";
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, id);
+            DataOfUser dataOfUser = null;
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                dataOfUser = new DataOfUser(
+                        rs.getString("Name"),
+                        rs.getString("Surname"),
+                        rs.getString("Nick")
+                );
+            } else {
+            }
+
+            rs.close();
+            ps.close();
+            return dataOfUser;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
 }
+
+
 
 

@@ -3,17 +3,15 @@ package spring;
 public class FlodaLog {
     int temperature;
     int soil;
-    int ph;
     int humidity;
     int sun;
     String date;
     boolean end;
     int number;
 
-    public FlodaLog(int temperature, int soil, int ph, int humidity, int sun, String date, boolean end) {
+    public FlodaLog(int temperature, int soil, int humidity, int sun, String date, boolean end) {
         this.temperature=temperature;
         this.soil=soil;
-        this.ph=ph;
         this.humidity=humidity;
         this.sun=sun;
         this.date=date;
@@ -23,7 +21,6 @@ public class FlodaLog {
     public FlodaLog(FlodaLog flodaLog) {
         this.temperature=flodaLog.temperature;
         this.soil=flodaLog.soil;
-        this.ph=flodaLog.ph;
         this.humidity=flodaLog.humidity;
         this.sun=flodaLog.sun;
         this.date=flodaLog.date;
@@ -37,7 +34,6 @@ public class FlodaLog {
 
     public int getTemperature(){ return temperature; }
     public int getSoil(){ return soil; }
-    public int getPh(){ return ph; }
     public int getHumidity(){ return humidity; }
     public int getSun(){ return sun; }
     public String getDate(){ return date; }

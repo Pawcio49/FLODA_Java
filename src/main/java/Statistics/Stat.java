@@ -1,5 +1,6 @@
 package Statistics;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -8,11 +9,8 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.fxml.FXML;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.springframework.context.ApplicationContext;
@@ -38,13 +36,12 @@ public class Stat {
     CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
     int who;
     int number;
+    int number2;
 
     @FXML
     private BarChart<?, ?> temperatureChart;
     @FXML
     private BarChart<?, ?> soilChart;
-    @FXML
-    private BarChart<?, ?> phChart;
     @FXML
     private BarChart<?, ?> humidityChart;
     @FXML
@@ -53,6 +50,17 @@ public class Stat {
     AnchorPane anchorPane;
     @FXML
     ScrollPane ScrollPane;
+    @FXML
+    CheckBox checkBox;
+
+    public XYChart.Series set1;
+    public XYChart.Series set2;
+    public XYChart.Series set5;
+    public XYChart.Series set4;
+    public XYChart.Series set6;
+    public XYChart.Series set7;
+    public XYChart.Series set8;
+    public XYChart.Series set9;
 
     @FXML
     void initialize() {
@@ -74,54 +82,79 @@ public class Stat {
 
 
          FlodaLog[] plant =  customerDAO.getFlodaLog(10, who);
+         FlodaLog[] average= customerDAO.getFlodaAverage(10, who);
 
-        if(plant[0] != null) {
+
             number = plant[0].getNumber();
+            number2 = average[0].getNumber();
 
-            XYChart.Series set1 = new XYChart.Series<>();
+
+            set1 = new XYChart.Series<>();
+            set6 = new XYChart.Series<>();
             for (int i = 0; i < number; i++) {
                 set1.getData().add(new XYChart.Data(plant[i].getDate().substring(0, 16), plant[i].getTemperature()));
             }
-
+            for (int i = 0; i < number2; i++) {
+            set6.getData().add(new XYChart.Data(average[i].getDate(), average[i].getTemperature()));
+            }
             temperatureChart.getXAxis().setTickLabelsVisible(false);
             temperatureChart.getXAxis().setOpacity(0);
-            temperatureChart.getData().addAll(set1);
 
-
-            XYChart.Series set2 = new XYChart.Series<>();
+            set2 = new XYChart.Series<>();
+            set7 = new XYChart.Series<>();
             for (int i = 0; i < number; i++) {
                 set2.getData().add(new XYChart.Data(plant[i].getDate().substring(0, 16), plant[i].getSoil()));
             }
+            for (int i = 0; i < number2; i++) {
+            set7.getData().add(new XYChart.Data(average[i].getDate(), average[i].getSoil()));
+            }
             soilChart.getXAxis().setTickLabelsVisible(false);
             soilChart.getXAxis().setOpacity(0);
-            soilChart.getData().addAll(set2);
 
-            XYChart.Series set3 = new XYChart.Series<>();
-            for (int i = 0; i < number; i++) {
-                set3.getData().add(new XYChart.Data(plant[i].getDate().substring(0, 16), plant[i].getPh()));
-            }
-            phChart.getXAxis().setTickLabelsVisible(false);
-            phChart.getXAxis().setOpacity(0);
-            phChart.getData().addAll(set3);
 
-            XYChart.Series set4 = new XYChart.Series<>();
+
+            set4 = new XYChart.Series<>();
+            set8 = new XYChart.Series<>();
             for (int i = 0; i < number; i++) {
                 set4.getData().add(new XYChart.Data(plant[i].getDate().substring(0, 16), plant[i].getHumidity()));
             }
+        for (int i = 0; i < number2; i++) {
+            set8.getData().add(new XYChart.Data(average[i].getDate(), average[i].getHumidity()));
+        }
             humidityChart.getXAxis().setTickLabelsVisible(false);
             humidityChart.getXAxis().setOpacity(0);
-            humidityChart.getData().addAll(set4);
 
-            XYChart.Series set5 = new XYChart.Series<>();
+
+            set5 = new XYChart.Series<>();
+            set9 = new XYChart.Series<>();
             for (int i = 0; i < number; i++) {
                 set5.getData().add(new XYChart.Data(plant[i].getDate().substring(0, 16), plant[i].getSun()));
             }
+        for (int i = 0; i < number2; i++) {
+            set9.getData().add(new XYChart.Data(average[i].getDate(), average[i].getSun()));
+        }
+
+        checkEvent(null);
+
+
+    }
+
+    public void checkEvent(ActionEvent event){
+        temperatureChart.getData().clear();
+        soilChart.getData().clear();
+        humidityChart.getData().clear();
+        sunChart.getData().clear();
+        if(checkBox.isSelected()){
+            temperatureChart.getData().addAll(set6);
+            soilChart.getData().addAll(set7);
+            humidityChart.getData().addAll(set8);
+            sunChart.getData().addAll(set9);
+        }
+        else{
+            temperatureChart.getData().addAll(set1);
+            soilChart.getData().addAll(set2);
+            humidityChart.getData().addAll(set4);
             sunChart.getData().addAll(set5);
         }
     }
-
-
-
-
-
 }

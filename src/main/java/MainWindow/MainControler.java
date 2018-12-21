@@ -34,11 +34,11 @@ public class MainControler {
     }
 
     @FXML
-    Button logowanie;
+    Button newType;
     @FXML
     Button web;
     @FXML
-    Button button;
+    Button butUser;
     @FXML
     Label label;
     @FXML
@@ -65,10 +65,13 @@ public class MainControler {
             adminfx.setDisable(true);
         }
 
-        button.setOnAction(actionEvent -> {
+        butUser.setOnAction(actionEvent -> {
             try {
-                Node node = FXMLLoader.load(getClass().getClassLoader().getResource("screen/dataView.fxml"));
-                Tab tb = new Tab("Baza danych", node);
+                PrintWriter save = new PrintWriter("Plant_ID.txt");
+                save.println(info.getID());
+                save.close();
+                Node node = FXMLLoader.load(getClass().getClassLoader().getResource("screen/user.fxml"));
+                Tab tb = new Tab("Ustawienia użytkownika", node);
                 TAB.getTabs().add(tb);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -117,6 +120,19 @@ public class MainControler {
                 Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/addflower.fxml"));
                 Tab tb2 = new Tab("Dodaj kwiatka", node2);
                 TAB.getTabs().add(tb2);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        newType.setOnAction(actionEvent -> {
+            try {
+                PrintWriter save = new PrintWriter("Plant_ID.txt");
+                save.println(info.getID());
+                save.close();
+                Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/newType.fxml"));
+                Tab tb3 = new Tab("Nowy gatunek", node3);
+                TAB.getTabs().add(tb3);
             } catch (IOException e) {
                 e.printStackTrace();
             }

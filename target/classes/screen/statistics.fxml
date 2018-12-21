@@ -4,14 +4,15 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-        <ScrollPane fx:id="ScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="1146.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statistics.Stat">
+<ScrollPane fx:id="ScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="1041.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statistics.Stat">
             <content>
         <AnchorPane fx:id="anchorPane" prefHeight="1018.0" prefWidth="598.0">
             <children>
-                <BarChart fx:id="temperatureChart" prefHeight="230.0" prefWidth="508.0" title="temperature" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <BarChart fx:id="temperatureChart" layoutY="97.0" prefHeight="230.0" prefWidth="508.0" title="temperature" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
                     <xAxis>
                         <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                     </xAxis>
@@ -19,7 +20,7 @@
                         <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                     </yAxis>
                 </BarChart>
-            <BarChart fx:id="soilChart" layoutX="34.0" layoutY="249.0" prefHeight="230.0" prefWidth="508.0" title="soil" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+            <BarChart fx:id="soilChart" layoutY="327.0" prefHeight="230.0" prefWidth="508.0" title="soil" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="327.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -27,7 +28,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="phChart" layoutX="45.0" layoutY="414.0" prefHeight="230.0" prefWidth="508.0" title="ph" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="460.0">
+            <BarChart fx:id="humidityChart" layoutY="557.0" prefHeight="230.0" prefWidth="508.0" title="humidity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="557.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -35,7 +36,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="humidityChart" layoutX="45.0" layoutY="669.0" prefHeight="230.0" prefWidth="508.0" title="humidity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="690.0">
+            <BarChart fx:id="sunChart" layoutY="787.0" prefHeight="230.0" prefWidth="508.0" title="sun" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="787.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -43,14 +44,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="sunChart" layoutX="45.0" layoutY="873.0" prefHeight="230.0" prefWidth="508.0" title="sun" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="920.0">
-               <xAxis>
-                  <CategoryAxis prefWidth="544.0" side="BOTTOM" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
-               </yAxis>
-            </BarChart>
+            <CheckBox fx:id="checkBox" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkEvent" text="Wyswietl srednie dniowe statystyki" />
             </children>
          <opaqueInsets>
             <Insets />

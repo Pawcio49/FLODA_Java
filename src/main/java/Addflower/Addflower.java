@@ -23,7 +23,6 @@ public class Addflower {
     ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring-Module.xml");
     CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
     String id;
-    int who;
     ObservableList<String> choiceBoxList= FXCollections.observableArrayList();
     ObservableList<String> choiceBoxList2= FXCollections.observableArrayList();
     int valueOfChB1=0;
@@ -44,7 +43,6 @@ public class Addflower {
     @FXML
     TextField password;
 
-
     @FXML
     void initialize(){
         File file =
@@ -57,7 +55,6 @@ public class Addflower {
         }
         while (sc.hasNextLine())
             id = sc.nextLine();
-        who = Integer.parseInt(id);
         sc.close();
         file.delete();
 
@@ -92,8 +89,6 @@ public class Addflower {
                 if(String.valueOf(choiceBox2.getValue()).equals(dateofCh2.get(i).getGatunek()))
                     valueOfChB2=dateofCh2.get(i).getId();
             }
-            System.out.println(valueOfChB2);
-            System.out.println("");
 
             try {
                 information.setText(phpAddFlower.addflower(id,id_sondy.getText(), name.getText(), String.valueOf(valueOfChB1), String.valueOf(valueOfChB2), password.getText()));
