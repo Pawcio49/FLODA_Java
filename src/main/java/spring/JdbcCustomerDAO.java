@@ -125,7 +125,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
         return ds;
     }
 
-    public ArrayList<FlodaConnection> getFlodaConnection(int line, int who) {
+    public ArrayList<FlodaConnection> getFlodaConnection(int who) {
         //public FlodaConnection[] getFlodaConnection(int line, int who) {
         String sql = "SELECT ID, whose, ID_sondy, Name, ID_from_base FROM FLODA_connections WHERE whose = " + who;
 

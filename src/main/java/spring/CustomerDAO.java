@@ -11,8 +11,7 @@ public interface CustomerDAO {
     public String insert(String whose, String name);
     public Info findByCustomerId(String nick,String passwd);
     public ResultSet getInfoTable(String statement);
-    //public FlodaConnection[] getFlodaConnection(int line, int who);
-    public ArrayList<FlodaConnection> getFlodaConnection(int line, int who);
+    public ArrayList<FlodaConnection> getFlodaConnection(int who);
     public FlodaLog[] getFlodaLog(int line, int who);
     public  ArrayList<DateofChoiceBox> getData();
     public  ArrayList<DateofChoiceBox> getData2();

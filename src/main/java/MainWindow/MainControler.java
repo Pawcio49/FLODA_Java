@@ -28,6 +28,10 @@ public class MainControler {
     CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
     Info info;
     private int line;
+    ArrayList<FlodaConnection> Plant;
+    int number;
+    List<Button> button;
+    int butSize;
 
     MainControler(Info info) {
         this.info = info;
@@ -55,7 +59,8 @@ public class MainControler {
     Button addbut;
     @FXML
     TitledPane StatESP;
-
+    @FXML
+    MenuItem refresh;
 
     @FXML
     void initialize() throws IOException {
@@ -140,13 +145,13 @@ public class MainControler {
 
 
 
-        List<Button> button = new ArrayList<Button>();
+        button = new ArrayList<Button>();
 
-        ArrayList<FlodaConnection> Plant = customerDAO.getFlodaConnection(100, info.getID());
-        //FlodaConnection[] Plant = customerDAO.getFlodaConnection(100, info.getID());
+        Plant = customerDAO.getFlodaConnection(info.getID());
 
-        int number=Plant.get(0).getNumber();
-        //int number=Plant[0].getNumber();
+
+        number=Plant.get(0).getNumber();
+
 
         ScrollPane sp=new ScrollPane();
         StatESP.setContent(sp);
@@ -157,44 +162,61 @@ public class MainControler {
 
         for (int i = 0;i<number; i++) {
 
-                button.add(new Button());
-                button.get(i).setLayoutX(68.0);
-                button.get(i).setLayoutY(14.0);
-                stats.setLeftAnchor(button.get(i), 5.0);
-                stats.setRightAnchor(button.get(i), 5.0);
-                stats.setTopAnchor(button.get(i), i * 35 + 5.0);
-
-                 button.get(i).setText(Plant.get(i).getName());
-                 //button.get(i).setText(Plant[i].getName());
-
-                int w=i;
-
-                button.get(i).setOnAction(actionEvent -> {
-
-                    Node node4 = null;
-                    try {
-
-                        PrintWriter save = new PrintWriter("Plant_ID_Sondy.txt");
-                        save.println(Plant.get(w).getId_sondy());
-                        //save.println(Plant[w].getId_sondy());
-                        save.close();
-                        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/statistics.fxml"));
-                        Tab tab = new Tab(Plant.get(w).getName(),root);
-                        //Tab tab = new Tab(Plant[w].getName(),root);
-                        TAB.getTabs().add(tab);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                });
-
-                stats.getChildren().add(button.get(i));
-
-
+            plantAction(stats, i);
+            butSize = button.size();
 
         }
 
 
+
+        refresh.setOnAction(actionEvent -> {
+            Plant = customerDAO.getFlodaConnection(info.getID());
+            button = new ArrayList<Button>();
+            stats.getChildren().clear();
+            number=Plant.get(0).getNumber();
+            for (int i = 0;i<number; i++) {
+
+                plantAction(stats, i);
+
+
+            }
+
+        });
+
+    }
+
+    private void plantAction(AnchorPane stats, int i) {
+        button.add(new Button());
+        button.get(i).setLayoutX(68.0);
+        button.get(i).setLayoutY(14.0);
+        stats.setLeftAnchor(button.get(i), 5.0);
+        stats.setRightAnchor(button.get(i), 5.0);
+        stats.setTopAnchor(button.get(i), i * 35 + 5.0);
+
+        button.get(i).setText(Plant.get(i).getName());
+
+
+        int w=i;
+
+        button.get(i).setOnAction(actionEvent -> {
+
+            Node node4 = null;
+            try {
+
+                PrintWriter save = new PrintWriter("Plant_ID_Sondy.txt");
+                save.println(Plant.get(w).getId_sondy());
+                save.close();
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/statistics.fxml"));
+                Tab tab = new Tab(Plant.get(w).getName(),root);
+                TAB.getTabs().add(tab);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        });
+
+
+        stats.getChildren().add(button.get(i));
     }
 }
