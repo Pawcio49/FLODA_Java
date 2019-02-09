@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="1294.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Test.test">
+    <content>
+        <AnchorPane fx:id="mainAnchor" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Label alignment="CENTER" layoutX="152.0" layoutY="37.0" prefHeight="20.0" prefWidth="289.0" text="Wybierz  gatunki, które mają być wyświetlane" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="37.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <AnchorPane layoutX="139.0" layoutY="281.0" prefHeight="270.0" prefWidth="598.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="175.0">
+                    <children>
+                        <Label alignment="CENTER" layoutY="14.0" text="stokrotka" textFill="#62c145" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font></Label>
+                        <SplitPane dividerPositions="0.5" layoutX="4.0" layoutY="48.0" prefHeight="112.0" prefWidth="258.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="31.0" prefHeight="30.0" prefWidth="295.0" text="Podlewanie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="17.0" layoutY="57.0" prefHeight="30.0" prefWidth="295.0" text="Temperatura" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="28.0" text="0-250C" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="85.0" text="min 50 j." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="24.0" prefHeight="30.0" prefWidth="295.0" text="Nasłonecznienie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="55.0" prefHeight="30.0" prefWidth="295.0" text="Wilgotność" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.5" layoutX="10.0" layoutY="58.0" prefHeight="112.0" prefWidth="258.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="31.0" layoutY="28.0" prefHeight="30.0" prefWidth="295.0" text="Podlewanie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="17.0" layoutY="55.0" prefHeight="30.0" prefWidth="295.0" text="Temperatura" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="30.0" text="0-250C" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="78.0" text="min 50 j." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="24.0" prefHeight="30.0" prefWidth="295.0" text="Nasłonecznienie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="55.0" prefHeight="30.0" prefWidth="295.0" text="Wilgotność" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <Label alignment="CENTER" layoutX="261.0" layoutY="246.0" text="stokrotka" textFill="#62c145" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="191.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <RadioButton fx:id="wszystkie" layoutX="54.0" layoutY="75.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="95.0" selected="true" text="Wszystkie">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="ustaweinia" />
+                    </toggleGroup></RadioButton>
+                <RadioButton fx:id="domyslne" layoutX="54.0" layoutY="110.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" text="Domyślne" toggleGroup="$ustaweinia" />
+                <RadioButton fx:id="dodane" layoutX="54.0" layoutY="145.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="185.0" text="Dodane przez użytkowników" toggleGroup="$ustaweinia" />
+                <AnchorPane layoutY="510.0" prefHeight="270.0" prefWidth="598.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="530.0">
+                    <children>
+                        <Label alignment="CENTER" layoutY="14.0" text="stokrotka" textFill="#62c145" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <SplitPane dividerPositions="0.5" layoutX="4.0" layoutY="48.0" prefHeight="112.0" prefWidth="258.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="31.0" prefHeight="30.0" prefWidth="295.0" text="Podlewanie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="17.0" layoutY="57.0" prefHeight="30.0" prefWidth="295.0" text="Temperatura" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="28.0" text="0-250C" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="85.0" text="min 50 j." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="24.0" prefHeight="30.0" prefWidth="295.0" text="Nasłonecznienie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="55.0" prefHeight="30.0" prefWidth="295.0" text="Wilgotność" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.5" layoutX="10.0" layoutY="58.0" prefHeight="112.0" prefWidth="258.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="31.0" layoutY="28.0" prefHeight="30.0" prefWidth="295.0" text="Podlewanie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="17.0" layoutY="55.0" prefHeight="30.0" prefWidth="295.0" text="Temperatura" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="30.0" text="0-250C" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="134.0" layoutY="78.0" text="min 50 j." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="24.0" prefHeight="30.0" prefWidth="295.0" text="Nasłonecznienie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Label alignment="CENTER" layoutX="96.0" layoutY="55.0" prefHeight="30.0" prefWidth="295.0" text="Wilgotność" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                        <Label alignment="CENTER" layoutX="261.0" layoutY="246.0" text="stokrotka" textFill="#62c145" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="191.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

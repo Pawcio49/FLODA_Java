@@ -40,15 +40,11 @@ public class MainControler {
     @FXML
     Button newType;
     @FXML
-    Button web;
-    @FXML
     Button butUser;
     @FXML
     Label label;
     @FXML
     TabPane TAB;
-    @FXML
-    TitledPane adminfx;
     @FXML
     MenuItem close;
     @FXML
@@ -61,14 +57,16 @@ public class MainControler {
     TitledPane StatESP;
     @FXML
     MenuItem refresh;
+    @FXML
+    Button delbut;
+    @FXML
+    Button ustSondy;
+    @FXML
+    Button allTypes;
 
     @FXML
     void initialize() throws IOException {
         label.setText(info.getName() + " " + info.getSurname() + " (" + info.getNick() + ") " + (info.getsu() == true ? "SuperAdmin" : ""));
-        if (info.getsu() == false) {
-            adminfx.visibleProperty().set(false);
-            adminfx.setDisable(true);
-        }
 
         butUser.setOnAction(actionEvent -> {
             try {
@@ -83,15 +81,6 @@ public class MainControler {
             }
         });
 
-        web.setOnAction(actionEvent -> {
-            try {
-                Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/Web.fxml"));
-                Tab tb2 = new Tab("WEB", node2);
-                TAB.getTabs().add(tb2);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
 
         close.setOnAction(actionEvent -> {
             System.exit(0);
@@ -110,7 +99,7 @@ public class MainControler {
                 menu.start(primaryStage);
 
 
-                Stage window = (Stage) web.getScene().getWindow();
+                Stage window = (Stage) addbut.getScene().getWindow();
                 window.close();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -123,7 +112,7 @@ public class MainControler {
                 save.println(info.getID());
                 save.close();
                 Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/addflower.fxml"));
-                Tab tb2 = new Tab("Dodaj kwiatka", node2);
+                Tab tb2 = new Tab("Dodaj roślinę", node2);
                 TAB.getTabs().add(tb2);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -136,7 +125,27 @@ public class MainControler {
                 save.println(info.getID());
                 save.close();
                 Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/newType.fxml"));
-                Tab tb3 = new Tab("Nowy gatunek", node3);
+                Tab tb3 = new Tab("Utwórz nowy gatunek", node3);
+                TAB.getTabs().add(tb3);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        ustSondy.setOnAction(actionEvent -> {
+            try {
+                Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/sonda.fxml"));
+                Tab tb3 = new Tab("Ustawienia sondy", node3);
+                TAB.getTabs().add(tb3);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        allTypes.setOnAction(actionEvent -> {
+            try {
+                Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/gatunki.fxml"));
+                Tab tb3 = new Tab("Dostępne gatunki", node3);
                 TAB.getTabs().add(tb3);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -181,6 +190,19 @@ public class MainControler {
 
             }
 
+        });
+
+        delbut.setOnAction(actionEvent -> {
+            try {
+                PrintWriter save = new PrintWriter("Plant_ID.txt");
+                save.println(info.getID());
+                save.close();
+                Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/deletePlant.fxml"));
+                Tab tb2 = new Tab("Usuń roślinę", node2);
+                TAB.getTabs().add(tb2);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
     }

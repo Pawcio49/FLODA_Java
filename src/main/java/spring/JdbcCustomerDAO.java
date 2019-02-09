@@ -14,7 +14,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
     public String insert(String whose, String name) {
 
         String sql = "INSERT INTO FLODA_connections " +
-                "(whose, Name, ID ) VALUES (?, ?, ?)";
+                "(whose, Name, ID ) VALUES (?, ?)";
         Connection conn = null;
 
         try {
@@ -22,7 +22,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, whose);
             ps.setString(2, name);
-            ps.setString(3, "11");
+
 
             ps.executeUpdate();
             ps.close();
@@ -89,11 +89,11 @@ public class JdbcCustomerDAO implements CustomerDAO {
                         );
                     }
 
-                }else {
+                } else {
                     return new Info(
                             "erro"
                     );
-                 }
+                }
 
             }
             rs.close();
@@ -161,9 +161,8 @@ public class JdbcCustomerDAO implements CustomerDAO {
                 }
             }
 
-            if(number==0)
-            {
-                floCon=new FlodaConnection(0,"0",0,"0",0,false);
+            if (number == 0) {
+                floCon = new FlodaConnection(0, "0", 0, "0", 0, false);
                 customer.add(floCon);
             }
 
@@ -187,7 +186,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
 
 
     public FlodaLog[] getFlodaLog(int line, int who) {
-        String sql = "SELECT nr_floda, temperature, soil, humidity, sun, date FROM floda_log WHERE nr_floda = " + who + " order by id desc";
+        String sql = "SELECT nr_floda, temperature, soil, humidity, sun, date FROM floda_log WHERE nr_floda = " + who + " order by date";
 
         Connection conn = null;
 
@@ -197,7 +196,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
             int number = 0;
             ResultSet rs = ps.executeQuery();
             FlodaLog[] customer = new FlodaLog[line];
-            customer[0]=new FlodaLog(0,0,0,0,"0",false);
+            customer[0] = new FlodaLog(0, 0, 0, 0, "0", false);
             for (int i = 0; i < line; i++) {
 
 
@@ -233,7 +232,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
     }
 
     public FlodaLog[] getFlodaAverage(int line, int who) {
-        String sql = "select * from srednia_dniowa where nr_floda=" + who;
+        String sql = "select * from srednia_dniowa where nr_floda=" + who +" order by date";
 
         Connection conn = null;
 
@@ -243,7 +242,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
             int number = 0;
             ResultSet rs = ps.executeQuery();
             FlodaLog[] customer = new FlodaLog[line];
-            customer[0]=new FlodaLog(0,0,0,0,"0",false);
+            customer[0] = new FlodaLog(0, 0, 0, 0, "0", false);
 
             for (int i = 0; i < line; i++) {
 
@@ -283,7 +282,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
 
     }
 
-    public  ArrayList<DateofChoiceBox> getData() {
+    public ArrayList<DateofChoiceBox> getData() {
         String sql = "SELECT Nazwa, ID FROM FLODA_main_database WHERE id_autora = 1";
 
         Connection conn = null;
@@ -295,17 +294,17 @@ public class JdbcCustomerDAO implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
             ArrayList<DateofChoiceBox> customer = new ArrayList<DateofChoiceBox>();
 
-            customer.add(new DateofChoiceBox("Domyslne ustawienia",0));
-            while(rs.next()){
-                    customer.add(new DateofChoiceBox(
-                            rs.getString("Nazwa"),
-                            rs.getInt("ID")
-                    ));
+            customer.add(new DateofChoiceBox("Domyślne ustawienia", 0));
+            while (rs.next()) {
+                customer.add(new DateofChoiceBox(
+                        rs.getString("Nazwa"),
+                        rs.getInt("ID")
+                ));
 
-                    number++;
+                number++;
 
             }
-            customer.get(0).setNumber(number+1);
+            customer.get(0).setNumber(number + 1);
             rs.close();
             ps.close();
             return customer;
@@ -322,9 +321,9 @@ public class JdbcCustomerDAO implements CustomerDAO {
         }
 
 
-
     }
-    public  ArrayList<DateofChoiceBox> getData2() {
+
+    public ArrayList<DateofChoiceBox> getData2() {
         String sql = "SELECT Nazwa, ID FROM FLODA_main_database WHERE id_autora != 1";
 
         Connection conn = null;
@@ -336,7 +335,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
             ArrayList<DateofChoiceBox> customer = new ArrayList<DateofChoiceBox>();
 
-            customer.add(new DateofChoiceBox("Ustawienia dodane przez użytkownikow", 0));
+            customer.add(new DateofChoiceBox("Ustawienia dodane przez użytkowników", 0));
             while (rs.next()) {
                 customer.add(new DateofChoiceBox(
                         rs.getString("Nazwa"),
@@ -363,6 +362,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
         }
 
     }
+
 
     public DataOfUser getDataOfUser(String id) {
 
@@ -400,6 +400,91 @@ public class JdbcCustomerDAO implements CustomerDAO {
         }
     }
 
+    public ArrayList<Types> getDefaultTypes() {
+        String sql = "select * from FLODA_main_database where id_autora = 1 order by Nazwa";
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            int number = 0;
+            ResultSet rs = ps.executeQuery();
+            ArrayList<Types> customer = new ArrayList<Types>();
+
+            while (rs.next()) {
+                customer.add(new Types(
+                        rs.getString("Nazwa"),
+                        rs.getInt("s_d_s"),
+                        rs.getInt("s_d_s_x"),
+                        rs.getInt("a_w_g"),
+                        rs.getInt("s_d_t"),
+                        rs.getInt("s_d_t_x"),
+                        rs.getInt("s_d_w"),
+                        rs.getInt("s_d_w_x"),
+                        rs.getInt("c_k_p")
+                ));
+
+            }
+            rs.close();
+            ps.close();
+            return customer;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
+
+    public ArrayList<Types> getAddedTypes() {
+        String sql = "select * from FLODA_main_database where id_autora != 1 order by Nazwa";
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            int number = 0;
+            ResultSet rs = ps.executeQuery();
+            ArrayList<Types> customer = new ArrayList<Types>();
+
+            while (rs.next()) {
+                customer.add(new Types(
+                        rs.getString("Nazwa"),
+                        rs.getInt("s_d_s"),
+                        rs.getInt("s_d_s_x"),
+                        rs.getInt("a_w_g"),
+                        rs.getInt("s_d_t"),
+                        rs.getInt("s_d_t_x"),
+                        rs.getInt("s_d_w"),
+                        rs.getInt("s_d_w_x"),
+                        rs.getInt("c_k_p")
+                ));
+
+            }
+            rs.close();
+            ps.close();
+            return customer;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
 }
 
 

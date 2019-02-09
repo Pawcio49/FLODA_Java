@@ -20,7 +20,7 @@ public class MainWindow {
         MainControler mainControler = new MainControler(info);
         fxmlLoader.setController(mainControler);
         window.setScene(new Scene(fxmlLoader.load()));
-        window.setTitle("Floda dev");
+        window.setTitle("Floda");
         window.resizableProperty().setValue(true);
 
 

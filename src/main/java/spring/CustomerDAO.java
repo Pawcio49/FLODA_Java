@@ -17,4 +17,6 @@ public interface CustomerDAO {
     public  ArrayList<DateofChoiceBox> getData2();
     public DataOfUser getDataOfUser(String id);
     public FlodaLog[] getFlodaAverage(int line, int who);
+    public ArrayList<Types> getDefaultTypes();
+    public ArrayList<Types> getAddedTypes();
 }

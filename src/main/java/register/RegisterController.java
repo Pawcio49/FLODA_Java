@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -36,11 +37,10 @@ public class RegisterController{
     @FXML
     Label com;
     @FXML
-    Button login;
+    ImageView login;
 
     @FXML
     void initialize() {
-        com.setText("");
 
         register.setOnAction(actionEvent -> {
 
@@ -63,7 +63,7 @@ public class RegisterController{
         });
 
 
-        login.setOnAction(actionEvent -> {
+        login.setOnMouseClicked(actionEvent -> {
             try {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/menu.fxml"));
                 Stage stage = (Stage) com.getScene().getWindow();

@@ -14,19 +14,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="770.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #1d7c00;" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <MenuBar prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #62c145;" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Program">
             <items>
-              <MenuItem fx:id="logOut" mnemonicParsing="false" text="Log out" />
-                  <MenuItem fx:id="close" mnemonicParsing="false" text="Close" />
+              <MenuItem fx:id="logOut" mnemonicParsing="false" text="Wyloguj się" />
+                  <MenuItem fx:id="close" mnemonicParsing="false" text="Zamknij" />
             </items>
           </Menu>
-          <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+          <Menu fx:id="edit" mnemonicParsing="false" text="Edycja">
                <items>
-                  <MenuItem fx:id="refresh" mnemonicParsing="false" text="Refresh" />
+                  <MenuItem fx:id="refresh" mnemonicParsing="false" text="Odśwież" />
                </items></Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
@@ -39,29 +39,30 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane fx:id="MainPane" dividerPositions="0.25" prefHeight="338.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane fx:id="MainPane" dividerPositions="0.21671018276762402" prefHeight="338.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                         <Accordion maxWidth="361.0" minWidth="100.0" prefHeight="386.0" prefWidth="183.0">
                           <panes>
-                            <TitledPane fx:id="ConfigESP" alignment="TOP_LEFT" prefHeight="258.0" prefWidth="188.0" text="Configure your FLODA">
+                            <TitledPane fx:id="ConfigESP" alignment="TOP_LEFT" prefHeight="391.0" prefWidth="156.0" style="-fx-background-color: #62c145;" text="Konfiguracja ustawień">
                                  <content>
                                     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                                        <content>
                                           <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                              <children>
                                                 <Button fx:id="butUser" layoutX="68.0" layoutY="14.0" mnemonicParsing="false" text="Ustawienia użytkownika" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                                                <Button fx:id="newType" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" text="Nowy gatunek" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
-                                                <Button fx:id="web" layoutX="68.0" layoutY="75.0" mnemonicParsing="false" text="WEB" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
-                                                <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" text="Dodaj kwiatka" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
+                                                <Button fx:id="newType" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" text="Utwórz nowy gatunek" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="145.0" />
+                                                <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" text="Dodaj roślinę" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                                                <Button fx:id="delbut" layoutX="45.0" layoutY="143.0" mnemonicParsing="false" text="Usuń roślinę" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
+                                                <Button fx:id="allTypes" mnemonicParsing="false" text="Dostępne gatunki" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
+                                                <Button fx:id="ustSondy" mnemonicParsing="false" text="Ustawienia sondy" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="180.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>
                                     </ScrollPane>
                                  </content>
                             </TitledPane>
-                            <TitledPane fx:id="StatESP" text="Statistics about four FLODA">
+                            <TitledPane fx:id="StatESP" text="Statystyki roślin">
                             </TitledPane>
-                            <TitledPane fx:id="adminfx" text="SuperAdmin options" />
                           </panes>
                         </Accordion>
                         <TabPane fx:id="TAB" prefHeight="386.0" prefWidth="660.0" tabClosingPolicy="ALL_TABS" />
@@ -72,9 +73,9 @@
                   </SplitPane>
                </children>
             </AnchorPane>
-          <AnchorPane maxHeight="30.0" minHeight="30.0" minWidth="0.0" prefHeight="30.0" prefWidth="598.0">
+          <AnchorPane maxHeight="30.0" minHeight="30.0" minWidth="0.0" prefHeight="30.0" prefWidth="598.0" style="-fx-background-color: #62c145; -fx-border-width: 10px;">
                <children>
-                  <Label fx:id="label" layoutX="6.0" layoutY="5.0" maxWidth="-Infinity" prefHeight="21.0" prefWidth="585.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                  <Label fx:id="label" layoutX="11.0" layoutY="5.0" maxWidth="-Infinity" prefHeight="30.0" prefWidth="787.0" style="-fx-background-color: #62c145;" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
                      <font>
                         <Font size="15.0" />
                      </font>

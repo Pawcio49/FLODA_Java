@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
@@ -12,7 +13,7 @@
             <content>
         <AnchorPane fx:id="anchorPane" prefHeight="1018.0" prefWidth="598.0">
             <children>
-                <BarChart fx:id="temperatureChart" layoutY="97.0" prefHeight="230.0" prefWidth="508.0" title="temperature" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+                <BarChart fx:id="temperatureChart" layoutY="97.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="temperature" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
                     <xAxis>
                         <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                     </xAxis>
@@ -20,7 +21,7 @@
                         <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                     </yAxis>
                 </BarChart>
-            <BarChart fx:id="soilChart" layoutY="327.0" prefHeight="230.0" prefWidth="508.0" title="soil" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="327.0">
+            <BarChart fx:id="soilChart" layoutY="327.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="soil" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="327.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -28,7 +29,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="humidityChart" layoutY="557.0" prefHeight="230.0" prefWidth="508.0" title="humidity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="557.0">
+            <BarChart fx:id="humidityChart" layoutY="557.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="humidity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="557.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -36,7 +37,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="sunChart" layoutY="787.0" prefHeight="230.0" prefWidth="508.0" title="sun" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="787.0">
+            <BarChart fx:id="sunChart" layoutY="787.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="sun" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="787.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -44,7 +45,10 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <CheckBox fx:id="checkBox" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkEvent" text="Wyswietl srednie dniowe statystyki" />
+            <CheckBox fx:id="checkBox" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkEvent" text="Wyswietl srednie dniowe statystyki">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></CheckBox>
             </children>
          <opaqueInsets>
             <Insets />

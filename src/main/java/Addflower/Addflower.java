@@ -1,12 +1,12 @@
 package Addflower;
 
+import MainWindow.MainControler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.CustomerDAO;
@@ -15,6 +15,7 @@ import spring.FlodaConnection;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -73,17 +74,16 @@ public class Addflower {
 
 
         choiceBox.setItems(choiceBoxList);
-        choiceBox.setValue("Domyslne ustawienia");
+        choiceBox.setValue("Domyślne ustawienia");
 
         choiceBox2.setItems(choiceBoxList2);
-        choiceBox2.setValue("Ustawienia dodane przez użytkownikow");
+        choiceBox2.setValue("Ustawienia dodane przez użytkowników");
 
         add.setOnAction(actionEvent -> {
             for(int i=0;i<dateofCh1.get(0).getNumber();i++) {
                 if(String.valueOf(choiceBox.getValue()).equals(dateofCh1.get(i).getGatunek()))
                     valueOfChB1=dateofCh1.get(i).getId();
             }
-            System.out.println(valueOfChB1);
 
             for(int i=0;i<dateofCh2.get(0).getNumber();i++) {
                 if(String.valueOf(choiceBox2.getValue()).equals(dateofCh2.get(i).getGatunek()))
@@ -96,7 +96,6 @@ public class Addflower {
                 e.printStackTrace();
             }
         });
-
 
 
 

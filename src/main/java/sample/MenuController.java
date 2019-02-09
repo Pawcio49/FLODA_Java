@@ -39,40 +39,37 @@ public class MenuController extends Thread {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring-Module.xml");
         buttlog.setOnAction(actionEvent -> {
-            try{
-            errorlabel.setText("");
-            if (!txtnick.getText().isEmpty() && !txtpasswd.getText().isEmpty()) {
-                CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
-                Info dd = new Info(customerDAO.findByCustomerId(txtnick.getText(), txtpasswd.getText()));
-                if(dd.getblocked()){
-                    errorlabel.setText("Twoje konto jest zablokowane");
-                }else {
+            try {
+                errorlabel.setText("");
+                if (!txtnick.getText().isEmpty() && !txtpasswd.getText().isEmpty()) {
+                    CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
+                    Info dd = new Info(customerDAO.findByCustomerId(txtnick.getText(), txtpasswd.getText()));
+                    if (dd.getEmail().equals("erro")) {
 
-                    if(dd.getEmail().equals("err")) {
+                        errorlabel.setText("Nieprawidłowy nick lub hasło");
+                    } else if (dd.getEmail().equals("err")) {
 
-                        errorlabel.setText("Bląd polaczenia z internetem!");
+                        errorlabel.setText("Brak połączenia z internetem");
 
-                    }
-                    else if (dd.getEmail().equals("erro")) {
+                    } else if (dd.getblocked()) {
+                        errorlabel.setText("Twoje konto jest zablokowane");
 
-                        errorlabel.setText("Bląd logowania!");
-                    }
-                    else{
+                    } else {
                         try {
-                        mainWindow = new MainWindow(dd);
+                            mainWindow = new MainWindow(dd);
                             Stage stage = (Stage) txtpasswd.getScene().getWindow();
 
-                                mainWindow.start(stage);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                            mainWindow.start(stage);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
 
                     }
-                    }
-            } else {
-                errorlabel.setText("Nie uzupelniles pol!");
-            }
-        }catch (Exception e){
+
+                } else {
+                    errorlabel.setText("Uzupełnij wszystkie pola");
+                }
+            } catch (Exception e) {
             }
         });
 

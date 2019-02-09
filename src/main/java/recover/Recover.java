@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -39,12 +40,15 @@ public class Recover {
     @FXML
     Label comMail;
     @FXML
-    Button login;
+    ImageView login;
 
     @FXML
     public void initialize(){
         PhpRecover phpRecover=new PhpRecover();
         sendMail.setOnAction(actionEvent -> {
+            verify.setDefaultButton(false);
+            change.setDefaultButton(false);
+            sendMail.setDefaultButton(true);
             try {
                 mail=email.getText();
                 mailCode=phpRecover.mail(mail);
@@ -52,16 +56,18 @@ public class Recover {
                 verify.setVisible(false);
 
                 if(mailCode==1) {
-                    comMail.setText("Link potwierdzajacy zostal wyslany na maila!");
+                    comMail.setText("Link potwierdzający został wysłany na e-maila!");
                     // System.out.println(phpRecover.mail(email.getText()));
                     kod.setVisible(true);
                     verify.setVisible(true);
+                    verify.setDefaultButton(true);
+                    sendMail.setDefaultButton(false);
                 }
                 else if(mailCode==0){
-                    comMail.setText("Wpisz maila");
+                    comMail.setText("Wpisz e-maila");
                 }
                 else{
-                    comMail.setText("Nie ma zarejestrowanego żadnego użytkownika o podanym emailu");
+                    comMail.setText("Nie ma zarejestrowanego żadnego użytkownika o podanym e-mailu");
                 }
                 newPass.setVisible(false);
                 verPass.setVisible(false);
@@ -77,6 +83,9 @@ public class Recover {
         });
 
         verify.setOnAction(actionEvent -> {
+            change.setDefaultButton(false);
+            verify.setDefaultButton(true);
+
             try {
                 comPass.setText("");
                 verPass.setText("");
@@ -89,7 +98,7 @@ public class Recover {
                     change.setVisible(false);
                 }
                 else if (verifyCode==1){
-                    comCode.setText("Bledny kod");
+                    comCode.setText("Błędny kod");
                     newPass.setVisible(false);
                     verPass.setVisible(false);
                     change.setVisible(false);
@@ -99,6 +108,8 @@ public class Recover {
                     newPass.setVisible(true);
                     verPass.setVisible(true);
                     change.setVisible(true);
+                    change.setDefaultButton(true);
+                    verify.setDefaultButton(false);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -113,7 +124,7 @@ public class Recover {
             }
         });
 
-        login.setOnAction(actionEvent -> {
+        login.setOnMouseClicked(actionEvent -> {
             try {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/menu.fxml"));
                 Stage stage = (Stage) change.getScene().getWindow();

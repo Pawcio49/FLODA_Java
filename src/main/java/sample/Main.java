@@ -16,7 +16,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("FLODA developer panel");
+        primaryStage.setTitle("Floda");
         primaryStage.resizableProperty().setValue(false);
         primaryStage.show();
 
