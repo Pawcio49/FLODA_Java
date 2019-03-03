@@ -232,7 +232,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
     }
 
     public FlodaLog[] getFlodaAverage(int line, int who) {
-        String sql = "select * from srednia_dniowa where nr_floda=" + who +" order by date";
+        String sql = "select * from srednia_dniowa where nr_floda=" + who + " order by date";
 
         Connection conn = null;
 
@@ -401,7 +401,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
     }
 
     public ArrayList<Types> getDefaultTypes() {
-        String sql = "select * from FLODA_main_database where id_autora = 1 order by Nazwa";
+        String sql = "select * from FLODA_main_database where id_autora = 1 and display = 1 order by Nazwa";
 
         Connection conn = null;
 
@@ -444,7 +444,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
     }
 
     public ArrayList<Types> getAddedTypes() {
-        String sql = "select * from FLODA_main_database where id_autora != 1 order by Nazwa";
+        String sql = "select * from FLODA_main_database where id_autora != 1 and display = 1 order by Nazwa";
 
         Connection conn = null;
 
@@ -485,8 +485,73 @@ public class JdbcCustomerDAO implements CustomerDAO {
         }
 
     }
+
+    public String findID_from_base(int who) {
+        String sql = "SELECT ID_from_base FROM FLODA_connections WHERE id_sondy = " + who;
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+            String x=rs.getString("ID_from_base");
+
+            rs.close();
+            ps.close();
+            return x;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
+
+    public Types getDateTypes(String id) {
+        String sql = "select * from FLODA_main_database where ID = "+id;
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            Types customer = new Types(rs.getString("Nazwa"),
+                    rs.getInt("s_d_s"),
+                    rs.getInt("s_d_s_x"),
+                    rs.getInt("a_w_g"),
+                    rs.getInt("s_d_t"),
+                    rs.getInt("s_d_t_x"),
+                    rs.getInt("s_d_w"),
+                    rs.getInt("s_d_w_x"),
+                    rs.getInt("c_k_p"));
+
+            rs.close();
+            ps.close();
+            return customer;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
 }
-
-
 
 

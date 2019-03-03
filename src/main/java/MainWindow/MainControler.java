@@ -60,8 +60,6 @@ public class MainControler {
     @FXML
     Button delbut;
     @FXML
-    Button ustSondy;
-    @FXML
     Button allTypes;
 
     @FXML
@@ -132,15 +130,6 @@ public class MainControler {
             }
         });
 
-        ustSondy.setOnAction(actionEvent -> {
-            try {
-                Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/sonda.fxml"));
-                Tab tb3 = new Tab("Ustawienia sondy", node3);
-                TAB.getTabs().add(tb3);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
 
         allTypes.setOnAction(actionEvent -> {
             try {

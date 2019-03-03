@@ -54,7 +54,6 @@
                                                 <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" text="Dodaj roślinę" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
                                                 <Button fx:id="delbut" layoutX="45.0" layoutY="143.0" mnemonicParsing="false" text="Usuń roślinę" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
                                                 <Button fx:id="allTypes" mnemonicParsing="false" text="Dostępne gatunki" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
-                                                <Button fx:id="ustSondy" mnemonicParsing="false" text="Ustawienia sondy" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="180.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>

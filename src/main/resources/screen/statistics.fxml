@@ -5,15 +5,18 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <ScrollPane fx:id="ScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="1041.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statistics.Stat">
             <content>
         <AnchorPane fx:id="anchorPane" prefHeight="1018.0" prefWidth="598.0">
             <children>
-                <BarChart fx:id="temperatureChart" layoutY="97.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="temperature" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+                <BarChart fx:id="temperatureChart" layoutY="97.0" prefHeight="230.0" prefWidth="508.0" title="Temperatura" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
                     <xAxis>
                         <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                     </xAxis>
@@ -21,7 +24,7 @@
                         <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                     </yAxis>
                 </BarChart>
-            <BarChart fx:id="soilChart" layoutY="327.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="soil" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="327.0">
+            <BarChart fx:id="soilChart" layoutY="327.0" prefHeight="230.0" prefWidth="598.0" title="Wilgotność gleby" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="327.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -29,7 +32,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="humidityChart" layoutY="557.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="humidity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="557.0">
+            <BarChart fx:id="humidityChart" layoutY="557.0" prefHeight="230.0" prefWidth="598.0" title="Wilgotność powietrza" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="557.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -37,7 +40,7 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <BarChart fx:id="sunChart" layoutY="787.0" legendVisible="false" prefHeight="230.0" prefWidth="508.0" title="sun" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="787.0">
+            <BarChart fx:id="sunChart" layoutY="787.0" prefHeight="230.0" prefWidth="508.0" title="Nasłonecznienie" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="787.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -45,10 +48,33 @@
                   <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                </yAxis>
             </BarChart>
-            <CheckBox fx:id="checkBox" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkEvent" text="Wyswietl srednie dniowe statystyki">
+            <CheckBox fx:id="checkBox" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#checkEvent" selected="true" text="Wyświetl średnie dniowe statystyki">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></CheckBox>
+            <Button fx:id="sondaSet" layoutX="408.0" layoutY="19.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="Zmień ustawienia sondy" AnchorPane.rightAnchor="39.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <AnchorPane fx:id="settingAnchor" layoutX="384.0" layoutY="57.0" prefHeight="212.0" prefWidth="200.0" style="-fx-background-color: #F4F4F4;" visible="false" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Okres pomiarów (w minutach)" />
+                  <TextField fx:id="minutes" layoutX="19.0" layoutY="38.0" />
+                  <TextField fx:id="password" layoutX="19.0" layoutY="93.0" />
+                  <Button fx:id="confirm" layoutX="116.0" layoutY="123.0" mnemonicParsing="false" style="-fx-background-color: #62c145;" text="Zatwierdź">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="cancel" layoutX="19.0" layoutY="123.0" mnemonicParsing="false" text="Anuluj">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="18.0" layoutY="76.0" prefHeight="17.0" prefWidth="173.0" text="Nowe hasło sondy (opcjonalnie)" />
+                  <Label fx:id="info" alignment="CENTER" layoutX="4.0" layoutY="157.0" prefHeight="66.0" prefWidth="187.0" textFill="RED" wrapText="true" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="info2" alignment="CENTER" layoutX="401.0" layoutY="57.0" prefHeight="24.0" prefWidth="164.0" textFill="RED" wrapText="true" AnchorPane.rightAnchor="33.0" />
+            <Label fx:id="soilInfo" alignment="CENTER" layoutY="519.0" text="Roślina była ostatnio podlewana 2 dni temu, a należy ją podlewać co 1 dzień" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             </children>
          <opaqueInsets>
             <Insets />

@@ -19,4 +19,6 @@ public interface CustomerDAO {
     public FlodaLog[] getFlodaAverage(int line, int who);
     public ArrayList<Types> getDefaultTypes();
     public ArrayList<Types> getAddedTypes();
+    public String findID_from_base(int who);
+    public Types getDateTypes(String id);
 }
