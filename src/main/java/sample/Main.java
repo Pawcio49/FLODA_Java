@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Objects;
 
 public class Main extends Application {
-    @Autowired
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("screen/menu.fxml")));

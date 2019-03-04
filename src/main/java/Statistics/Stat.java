@@ -474,10 +474,10 @@ public class Stat {
                         text=phpSonda.modifySonda("",password.getText(),who);
                         switch (text) {
                             case "1":
-                                info2.setText("Zmień okres pomiarów lub hasło sondy");
+                                info.setText("Zmień okres pomiarów lub hasło sondy");
                                 break;
                             case "3":
-                                info2.setText("Wprowadzone hasło sondy jest aktualnym hasłem");
+                                info.setText("Wprowadzone hasło sondy jest aktualnym hasłem");
                                 break;
                             case "4":
                                 info2.setText("Zmieniono hasło sondy");
@@ -495,7 +495,7 @@ public class Stat {
                                 settingAnchor.setVisible(false);
                                 break;
                             case "5":
-                                info2.setText("Wprowadzone hasło sondy jest aktualnym hasłem");
+                                info.setText("Wprowadzone hasło sondy jest aktualnym hasłem");
                                 break;
                             case "6":
                                 info2.setText("Zmieniono okres pomiarów i hasło sondy");

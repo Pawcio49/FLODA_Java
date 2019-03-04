@@ -10,24 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Do statistics">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Floda_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/floda.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/floda.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module_floda.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/freelab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/strzalka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/zsp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_34.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Floda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Floda.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Statistics/Stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Statistics/Stat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Floda-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Floda-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Floda-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Floda-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/screen/statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/screen/statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Statistics/Stat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Statistics/Stat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screen/statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screen/statistics.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,85 +111,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Statistics/Stat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3757">
-              <caret line="254" column="5" selection-start-line="254" selection-start-column="5" selection-end-line="254" selection-end-column="5" />
+            <state relative-caret-position="969">
+              <caret line="479" column="82" lean-forward="true" selection-start-line="479" selection-start-column="46" selection-end-line="479" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Floda.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="42" selection-start-line="70" selection-start-column="36" selection-end-line="71" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Datasource.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Module.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/floda.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <entry file="file://$PROJECT_DIR$/src/main/resources/screen/statistics.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="72" column="36" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/src/main/resources/screen/newType.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <entry file="file://$PROJECT_DIR$/src/main/resources/screen/addflower.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="116" selection-start-line="25" selection-start-column="112" selection-end-line="25" selection-end-column="116" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Customer.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -218,7 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>controle</find>
       <find>controll</find>
       <find>dd</find>
       <find>passwd</find>
@@ -235,7 +181,6 @@
       <find>logowanie</find>
       <find>md5</find>
       <find>refresh</find>
-      <find>button</find>
       <find>butSize</find>
       <find>check</find>
       <find>visible</find>
@@ -246,6 +191,10 @@
       <find>li1</find>
       <find>System</find>
       <find>hum</find>
+      <find>info2</find>
+      <find>button</find>
+      <find>info</find>
+      <find>wybi</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -279,7 +228,6 @@
         <option value="$PROJECT_DIR$/src/main/java/User/PhpModifyUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/User/user.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/DataOfUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recover/PhpRecover.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/FlodaLog.java" />
         <option value="$PROJECT_DIR$/src/main/java/deletePlant/PhpdelPlant.java" />
         <option value="$PROJECT_DIR$/src/main/java/register/RegisterController.java" />
@@ -294,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/screen/test.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/Gatunki/gatunki.java" />
         <option value="$PROJECT_DIR$/src/main/resources/screen/menu.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/screen/addflower.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/screen/deletePlant.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/screen/newType.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/screen/user.fxml" />
@@ -307,13 +254,15 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/JdbcCustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Statistics/phpSonda.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/screen/statistics.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/Statistics/Stat.java" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/MenuController.java" />
         <option value="$PROJECT_DIR$/floda.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recover/PhpRecover.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/screen/addflower.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/Statistics/Stat.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/screen/statistics.fxml" />
       </list>
     </option>
   </component>
@@ -374,42 +323,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="dataView" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="MainWindow" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="sample" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="screen" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Floda" type="616d4139:PackageViewModuleNode" />
-              <item name="spring" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,6 +492,42 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="dataView" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="MainWindow" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="sample" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="screen" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Floda" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Floda" type="616d4139:PackageViewModuleNode" />
+              <item name="spring" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -600,7 +549,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551650586890" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551738105901" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -837,6 +786,10 @@
       <workItem from="1551614093560" duration="438000" />
       <workItem from="1551645802259" duration="5558000" />
       <workItem from="1551654210647" duration="464000" />
+      <workItem from="1551733013602" duration="2095000" />
+      <workItem from="1551735143382" duration="1033000" />
+      <workItem from="1551736547059" duration="177000" />
+      <workItem from="1551736743642" duration="1321000" />
     </task>
     <task id="LOCAL-00001" summary="Connection with php">
       <created>1544721819690</created>
@@ -905,7 +858,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332820000" />
+    <option name="totallyTimeSpent" value="337446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -923,7 +876,7 @@
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.6703755" visible="true" weight="0.24147122" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.6703755" visible="true" weight="0.2521322" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -946,7 +899,52 @@
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32827735" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32827735" />
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.3293011" />
-      <window_info anchor="bottom" id="Run" order="18" sideWeight="0.48880598" weight="0.3217768" />
+      <window_info active="true" anchor="bottom" id="Run" order="18" sideWeight="0.48880598" visible="true" weight="0.3217768" />
+      <window_info anchor="bottom" id="Docker" order="19" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Duplicate detector" order="20" weight="0.32936078" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.0836887" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.06876332" />
+      <window_info anchor="right" id="JetGradle" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32942432" />
+      <window_info anchor="right" id="Palette" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32942432" />
+      <window_info anchor="right" id="Maven" order="11" weight="0.17270789" />
+      <window_info anchor="right" id="JSF" order="12" />
+      <window_info anchor="right" id="CDI" order="13" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.6703755" visible="true" weight="0.24413647" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49946696" weight="0.32827735" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4989339" weight="0.32827735" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.16251354" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3017429" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Application Servers" order="8" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026652" side_tool="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49733475" weight="0.11700975" />
+      <window_info anchor="bottom" id="Changes" order="12" />
+      <window_info anchor="bottom" id="Profiler" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49840087" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="15" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32827735" />
+      <window_info anchor="bottom" id="Database Console" order="17" weight="0.3293011" />
+      <window_info anchor="bottom" id="Run" order="18" sideWeight="0.48880598" visible="true" weight="0.3217768" />
       <window_info anchor="bottom" id="Docker" order="19" show_stripe_button="false" />
       <window_info anchor="bottom" id="Duplicate detector" order="20" weight="0.32936078" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -963,7 +961,7 @@
       <window_info anchor="right" id="Maven" order="11" visible="true" weight="0.17270789" />
       <window_info anchor="right" id="JSF" order="12" />
       <window_info anchor="right" id="CDI" order="13" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1042,16 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/register/PHPcontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/Info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1117,18 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recover/PhpRecover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="74" column="67" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/screen/test.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
@@ -1161,37 +1137,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/addflower.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recover/Recover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="124" column="11" lean-forward="true" selection-start-line="118" selection-start-column="8" selection-end-line="124" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/screen/register.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/newType.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="116" selection-start-line="20" selection-start-column="116" selection-end-line="20" selection-end-column="116" />
         </state>
       </provider>
     </entry>
@@ -1213,30 +1163,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Sonda/sonda.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/screen/sonda.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/NewType/newType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3808">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Gatunki/gatunki.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
           <caret line="182" selection-start-line="182" selection-end-line="182" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deletePlant/PhpdelPlant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1257,14 +1187,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="2045" selection-start-line="2045" selection-end-line="2045" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/statistics.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1376,16 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Statistics/Stat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="254" column="5" selection-start-line="254" selection-start-column="5" selection-end-line="254" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1413,10 +1325,30 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Module.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Customer.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/floda.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deletePlant/PhpdelPlant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="80" lean-forward="true" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1425,18 +1357,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="442">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Customer.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floda.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/recover/Recover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="901">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recover/PhpRecover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NewType/newType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/register/PHPcontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/newType.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/addflower.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="116" selection-start-line="25" selection-start-column="112" selection-end-line="25" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Statistics/Stat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="479" column="82" lean-forward="true" selection-start-line="479" selection-start-column="46" selection-end-line="479" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/screen/statistics.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="36" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="36" />
         </state>
       </provider>
     </entry>
