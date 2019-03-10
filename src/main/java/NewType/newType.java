@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -100,21 +101,26 @@ public class newType {
         radioPod1.setOnAction(actionEvent -> {
             c_k_p.setVisible(true);
             choicePod.setVisible(false);
+            choicePod.setValue("Wybierz opcję");
         });
 
         radioPod2.setOnAction(actionEvent -> {
             c_k_p.setVisible(false);
             choicePod.setVisible(true);
+            c_k_p.setText("");
         });
 
         radioNas1.setOnAction(actionEvent -> {
             splitNas.setVisible(true);
             choiceNas.setVisible(false);
+            choiceNas.setValue("Wybierz opcję");
         });
 
         radioNas2.setOnAction(actionEvent -> {
             splitNas.setVisible(false);
             choiceNas.setVisible(true);
+            minNas.setText("");
+            maxNas.setText("");
         });
 
 
@@ -138,14 +144,72 @@ public class newType {
             metLin();
         });
 
-        /*button.setOnAction(actionEvent -> {
+        button.setOnAction(actionEvent -> {
+
+            String codePod;
+            String codeNas;
             PhpNewType phpNewType=new PhpNewType();
+
+            switch((String) choicePod.getValue()){
+                case "Wybierz opcję":
+                    codePod = "";
+                    break;
+                case "*(0j-Suchy czujnik)*":
+                    codePod = "";
+                    break;
+                case "*(100j-Szklanka z wodą)*":
+                    codePod = "";
+                    break;
+                case "Sucho (poniżej 35j)":
+                    codePod = "w1";
+                    break;
+                case "Wilgotno (36-60j)":
+                    codePod = "w2";
+                    break;
+                case "Mokro (61-80j)":
+                    codePod = "w3";
+                    break;
+                case "Stoi woda (powyżej 80j)":
+                    codePod = "w4";
+                    break;
+                default:
+                    codePod="";
+                    break;
+            }
+
+            switch((String) choiceNas.getValue()){
+                case "Wybierz opcję":
+                    codeNas = "";
+                    break;
+                case "Pełne słońce":
+                    codeNas = "n1";
+                    break;
+                case "Częściowe słońce/Częściowy cień":
+                    codeNas = "n2";
+                    break;
+                case "Lekko nasłoneczniony":
+                    codeNas = "n3";
+                    break;
+                case "Pełny cień":
+                    codeNas = "n4";
+                    break;
+                default:
+                    codeNas="";
+                    break;
+            }
+
+
             try {
-              information.setText(phpNewType.newType(id, nazwa.getText(), s_d_s.getText(), a_w_g.getText(), c_k_p.getText(), s_d_t.getText(), s_d_w.getText(),www.getText()));
+                if(nazwa.getText().equals("")){
+                    information.setText("Podaj nazwę gatunku");
+                }
+                else {
+                    information.setText(phpNewType.newType(nazwa.getText(),id,c_k_p.getText(),codePod,minNas.getText(),maxNas.getText(),codeNas, minTem.getText(), maxTem.getText(), minWil.getText(), maxWil.getText(),www.getText()));
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        });*/
+        });
     }
 
     public void metPod(){

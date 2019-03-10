@@ -64,7 +64,7 @@ public class MainControler {
 
     @FXML
     void initialize() throws IOException {
-        label.setText(info.getName() + " " + info.getSurname() + " (" + info.getNick() + ") " + (info.getsu() == true ? "SuperAdmin" : ""));
+        label.setText(info.getName() + " " + info.getSurname() + " (" + info.getNick() + ") " + (info.getsu() ? "SuperAdmin" : ""));
 
         butUser.setOnAction(actionEvent -> {
             try {
@@ -74,6 +74,7 @@ public class MainControler {
                 Node node = FXMLLoader.load(getClass().getClassLoader().getResource("screen/user.fxml"));
                 Tab tb = new Tab("Ustawienia użytkownika", node);
                 TAB.getTabs().add(tb);
+                TAB.getSelectionModel().select(tb);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -112,6 +113,7 @@ public class MainControler {
                 Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/addflower.fxml"));
                 Tab tb2 = new Tab("Dodaj roślinę", node2);
                 TAB.getTabs().add(tb2);
+                TAB.getSelectionModel().select(tb2);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -125,6 +127,7 @@ public class MainControler {
                 Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/newType.fxml"));
                 Tab tb3 = new Tab("Utwórz nowy gatunek", node3);
                 TAB.getTabs().add(tb3);
+                TAB.getSelectionModel().select(tb3);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -136,6 +139,7 @@ public class MainControler {
                 Node node3 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/gatunki.fxml"));
                 Tab tb3 = new Tab("Dostępne gatunki", node3);
                 TAB.getTabs().add(tb3);
+                TAB.getSelectionModel().select(tb3);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -189,6 +193,7 @@ public class MainControler {
                 Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/deletePlant.fxml"));
                 Tab tb2 = new Tab("Usuń roślinę", node2);
                 TAB.getTabs().add(tb2);
+                TAB.getSelectionModel().select(tb2);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -220,7 +225,7 @@ public class MainControler {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/statistics.fxml"));
                 Tab tab = new Tab(Plant.get(w).getName(),root);
                 TAB.getTabs().add(tab);
-
+                TAB.getSelectionModel().select(tab);
             } catch (IOException e) {
                 e.printStackTrace();
             }
