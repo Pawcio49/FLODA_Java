@@ -28,11 +28,6 @@
                <items>
                   <MenuItem fx:id="refresh" mnemonicParsing="false" text="Odśwież" />
                </items></Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
         </menus>
       </MenuBar>
       <SplitPane dividerPositions="0.9117647058823529" orientation="VERTICAL" prefHeight="377.0" prefWidth="600.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">

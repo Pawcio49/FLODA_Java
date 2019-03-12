@@ -127,7 +127,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
 
     public ArrayList<FlodaConnection> getFlodaConnection(int who) {
         //public FlodaConnection[] getFlodaConnection(int line, int who) {
-        String sql = "SELECT ID, whose, ID_sondy, Name, ID_from_base FROM FLODA_connections WHERE whose = " + who;
+        String sql = "SELECT * FROM statystyki WHERE whose = " + who;
 
         Connection conn = null;
         FlodaConnection floCon;
@@ -149,12 +149,13 @@ public class JdbcCustomerDAO implements CustomerDAO {
                 } else {
 
                     floCon = new FlodaConnection(
-                            //customer[i] = new FlodaConnection(
                             rs.getInt("ID"),
-                            rs.getString("whose"),
                             rs.getInt("ID_sondy"),
                             rs.getString("Name"),
-                            rs.getInt("ID_from_base"),
+                            rs.getInt("normwilg"),
+                            rs.getInt("normtemp"),
+                            rs.getInt("normsun"),
+                            rs.getInt("normpod"),
                             false);
                     number++;
                     customer.add(floCon);
@@ -162,7 +163,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
             }
 
             if (number == 0) {
-                floCon = new FlodaConnection(0, "0", 0, "0", 0, false);
+                floCon = new FlodaConnection(0, 0, "0", 0, 0, 0, 0, false);
                 customer.add(floCon);
             }
 
