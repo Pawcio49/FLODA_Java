@@ -8,23 +8,27 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
+<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: linear-gradient(to bottom, #007369,#00A993);" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
    <children>
-      <TextField fx:id="name" layoutX="26.0" layoutY="137.0" prefHeight="25.0" prefWidth="224.0" promptText="Imię" style="-fx-background-color: #1d7c00;" />
-      <TextField fx:id="surname" layoutX="26.0" layoutY="170.0" prefHeight="25.0" prefWidth="224.0" promptText="Nazwisko" style="-fx-background-color: #1d7c00;" />
-      <PasswordField fx:id="r_password" layoutX="26.0" layoutY="302.0" prefHeight="25.0" prefWidth="224.0" promptText="Powtórz hasło" style="-fx-background-color: #1d7c00;" />
-      <PasswordField fx:id="password" layoutX="26.0" layoutY="269.0" prefHeight="25.0" prefWidth="224.0" promptText="Hasło" style="-fx-background-color: #1d7c00;" />
-      <TextField fx:id="nick" layoutX="26.0" layoutY="236.0" prefHeight="25.0" prefWidth="224.0" promptText="Nick" style="-fx-background-color: #1d7c00;" />
-      <TextField fx:id="email" layoutX="26.0" layoutY="203.0" prefHeight="25.0" prefWidth="224.0" promptText="E-mail" style="-fx-background-color: #1d7c00;" />
-      <Button fx:id="register" defaultButton="true" layoutX="26.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #62c145;" text="Zarejestruj się">
+      <TextField fx:id="name" layoutX="26.0" layoutY="115.0" prefHeight="25.0" prefWidth="224.0" promptText="Imię" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+      <TextField fx:id="surname" layoutX="26.0" layoutY="152.0" prefHeight="25.0" prefWidth="224.0" promptText="Nazwisko" style="-fx-background-color: #fffdf3; -tx-text-fill: #003840;" />
+      <PasswordField fx:id="r_password" layoutX="26.0" layoutY="300.0" prefHeight="25.0" prefWidth="224.0" promptText="Powtórz hasło" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+      <PasswordField fx:id="password" layoutX="26.0" layoutY="263.0" prefHeight="25.0" prefWidth="224.0" promptText="Hasło" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+      <TextField fx:id="nick" layoutX="26.0" layoutY="226.0" prefHeight="25.0" prefWidth="224.0" promptText="Nick" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+      <TextField fx:id="email" layoutX="26.0" layoutY="189.0" prefHeight="25.0" prefWidth="224.0" promptText="E-mail" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+      <Button fx:id="register" defaultButton="true" layoutX="26.0" layoutY="336.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: #03E3A9;" text="Zarejestruj się">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="com" layoutX="26.0" layoutY="368.0" textFill="#ff2323" />
-      <ImageView fitHeight="73.0" fitWidth="200.0" layoutX="38.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="com" layoutX="26.0" layoutY="368.0" textFill="#e82222">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="73.0" fitWidth="200.0" layoutX="38.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../logo.png" />
+            <Image url="@../logo_(bialy_napis).png" />
          </image>
       </ImageView>
       <ImageView fx:id="login" fitHeight="25.0" fitWidth="30.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">

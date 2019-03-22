@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="770.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #62c145;" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <MenuBar prefHeight="25.0" prefWidth="600.0" style="-fx-background-color:#00A993;" AnchorPane.bottomAnchor="425.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="Program">
             <items>
@@ -28,22 +28,20 @@
                <items>
                   <MenuItem fx:id="refresh" mnemonicParsing="false" text="Odśwież" />
                </items></Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
         </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </MenuBar>
       <SplitPane dividerPositions="0.9117647058823529" orientation="VERTICAL" prefHeight="377.0" prefWidth="600.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane fx:id="MainPane" dividerPositions="0.21671018276762402" prefHeight="338.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane fx:id="MainPane" dividerPositions="0.2506527415143603" prefHeight="338.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                         <Accordion maxWidth="361.0" minWidth="100.0" prefHeight="386.0" prefWidth="183.0">
                           <panes>
-                            <TitledPane fx:id="ConfigESP" alignment="TOP_LEFT" prefHeight="391.0" prefWidth="156.0" style="-fx-background-color: #62c145;" text="Konfiguracja ustawień">
+                            <TitledPane fx:id="ConfigESP" alignment="TOP_LEFT" prefHeight="391.0" prefWidth="156.0" style="-fx-background-color:#00A993;" text="Konfiguracja ustawień">
                                  <content>
                                     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                                        <content>
@@ -64,7 +62,7 @@
                             </TitledPane>
                           </panes>
                         </Accordion>
-                        <TabPane fx:id="TAB" prefHeight="386.0" prefWidth="660.0" tabClosingPolicy="ALL_TABS" />
+                        <TabPane fx:id="TAB" prefHeight="386.0" prefWidth="590.0" tabClosingPolicy="ALL_TABS" />
                     </items>
                      <opaqueInsets>
                         <Insets />
@@ -72,9 +70,9 @@
                   </SplitPane>
                </children>
             </AnchorPane>
-          <AnchorPane maxHeight="30.0" minHeight="30.0" minWidth="0.0" prefHeight="30.0" prefWidth="598.0" style="-fx-background-color: #62c145; -fx-border-width: 10px;">
+          <AnchorPane maxHeight="30.0" minHeight="30.0" minWidth="0.0" prefHeight="30.0" prefWidth="598.0" style="-fx-background-color:#00A993; -fx-border-width: 10px;">
                <children>
-                  <Label fx:id="label" layoutX="11.0" layoutY="5.0" maxWidth="-Infinity" prefHeight="30.0" prefWidth="787.0" style="-fx-background-color: #62c145;" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                  <Label fx:id="label" layoutX="11.0" layoutY="5.0" maxWidth="-Infinity" prefHeight="30.0" prefWidth="787.0" style="-fx-background-color:#00A993;" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
                      <font>
                         <Font size="15.0" />
                      </font>

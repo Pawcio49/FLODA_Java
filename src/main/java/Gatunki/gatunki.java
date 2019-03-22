@@ -90,7 +90,7 @@ public class gatunki {
         Label name = new Label(n.getNazwa());
         anchorPane.getChildren().add(name);
         name.setAlignment(Pos.CENTER);
-        name.setTextFill(Paint.valueOf("#62c145"));
+        name.setTextFill(Paint.valueOf("#00A993"));
         name.setFont(Font.font("System", FontWeight.BOLD,14));
         anchorPane.setLeftAnchor(name,0.0);
         anchorPane.setRightAnchor(name,0.0);

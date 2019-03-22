@@ -24,7 +24,7 @@
                         <NumberAxis prefHeight="296.0" prefWidth="26.0" side="LEFT" />
                     </yAxis>
                 </BarChart>
-            <BarChart fx:id="soilChart" layoutY="327.0" prefHeight="230.0" prefWidth="598.0" title="Wilgotność gleby" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="327.0">
+            <BarChart fx:id="soilChart" layoutY="328.0" prefHeight="230.0" prefWidth="598.0" title="Wilgotność gleby" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="328.0">
                <xAxis>
                   <CategoryAxis prefWidth="544.0" side="BOTTOM" />
                </xAxis>
@@ -52,16 +52,16 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></CheckBox>
-            <Button fx:id="sondaSet" layoutX="409.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #62c145;" text="Zmień ustawienia sondy" AnchorPane.rightAnchor="38.0">
+            <Button fx:id="sondaSet" layoutX="409.0" layoutY="32.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="172.0" style="-fx-background-color:#00A993; -fx-text-fill: white;" text="Zmień ustawienia sondy" AnchorPane.rightAnchor="38.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <AnchorPane fx:id="settingAnchor" layoutX="384.0" layoutY="57.0" prefHeight="198.0" prefWidth="207.0" style="-fx-background-color: #F4F4F4;" visible="false" AnchorPane.rightAnchor="8.0">
+            <AnchorPane fx:id="settingAnchor" layoutX="384.0" layoutY="57.0" prefHeight="198.0" prefWidth="228.0" style="-fx-background-color: #F4F4F4;" visible="false" AnchorPane.rightAnchor="8.0">
                <children>
                   <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" text="Okres pomiarów (w minutach)" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                   <TextField fx:id="minutes" layoutX="19.0" layoutY="35.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" />
                   <TextField fx:id="password" layoutX="19.0" layoutY="90.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" />
-                  <Button fx:id="confirm" layoutX="112.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #62c145;" text="Zatwierdź">
+                  <Button fx:id="confirm" layoutX="112.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color:#00A993;" text="Zatwierdź">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
@@ -70,11 +70,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
                   <Label alignment="CENTER" layoutX="18.0" layoutY="69.0" prefHeight="17.0" prefWidth="173.0" text="Nowe hasło sondy (opcjonalnie)" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Label fx:id="info" alignment="CENTER" layoutX="4.0" layoutY="151.0" prefHeight="46.0" prefWidth="175.0" text="Wprowadzone hasło sondy jest aktualnym hasłem" textAlignment="CENTER" textFill="RED" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" />
+                  <Label fx:id="info" alignment="CENTER" layoutX="4.0" layoutY="151.0" prefHeight="46.0" prefWidth="175.0" text="Wprowadzone hasło sondy jest aktualnym hasłem" textAlignment="CENTER" textFill="#f8542B" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" />
                </children>
             </AnchorPane>
-            <Label fx:id="info2" alignment="CENTER" layoutX="404.0" layoutY="57.0" prefHeight="43.0" prefWidth="160.0" textAlignment="CENTER" textFill="RED" wrapText="true" AnchorPane.rightAnchor="34.0" />
-            <Label fx:id="soilInfo" alignment="CENTER" layoutY="519.0" text="Roślina była ostatnio podlewana 2 dni temu, a należy ją podlewać co 1 dzień" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label fx:id="info2" alignment="CENTER" layoutX="404.0" layoutY="57.0" prefHeight="43.0" prefWidth="178.0" textAlignment="CENTER" textFill="#f8542B" wrapText="true" AnchorPane.rightAnchor="34.0" />
+            <Label fx:id="soilInfo" alignment="CENTER" layoutY="515.0" text="Roślina była ostatnio podlewana 2 dni temu, a należy ją podlewać co 1 dzień" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             </children>
          <opaqueInsets>
             <Insets />

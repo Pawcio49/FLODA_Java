@@ -18,7 +18,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
 
 
-        Image image=new Image("icon.png");
+        Image image=new Image("logo_(bez_napisu).png");
         primaryStage.getIcons().add(image);
 
         primaryStage.setScene(scene);

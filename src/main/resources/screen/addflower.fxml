@@ -16,15 +16,15 @@
    <AnchorPane fx:id="anchorPane" prefHeight="1018.0" prefWidth="598.0">
        <children>
       <TextField fx:id="name" layoutX="225.0" layoutY="59.0" promptText="Nazwa rośliny" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="78.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="226.0" layoutY="29.0" prefHeight="17.0" prefWidth="147.0" text="Dodaj nową roślinę" textAlignment="CENTER" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="31.0">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="226.0" layoutY="29.0" prefHeight="17.0" prefWidth="147.0" text="Dodaj nową roślinę" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
                <font>
                   <Font size="14.0" />
                </font></Label>
-      <Label fx:id="information" alignment="CENTER" layoutX="108.0" layoutY="345.0" prefHeight="17.0" prefWidth="383.0" textFill="RED" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="345.0" />
+      <Label fx:id="information" alignment="CENTER" layoutX="108.0" layoutY="345.0" prefHeight="17.0" prefWidth="383.0" textFill="#f8542B" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="345.0" />
             <TextField fx:id="id_sondy" layoutX="58.0" layoutY="96.0" promptText="Login sondy" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="120.0" />
             <PasswordField fx:id="password" layoutX="58.0" layoutY="133.0" promptText="Hasło sondy" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="162.0" />
             <Label alignment="CENTER" layoutX="142.0" layoutY="197.0" prefHeight="17.0" prefWidth="299.0" text="Wybierz gatunek rośliny " AnchorPane.leftAnchor="122.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="216.0" />
-            <Button fx:id="add" defaultButton="true" layoutX="255.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #62c145;" text="Dodaj" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="304.0">
+            <Button fx:id="add" defaultButton="true" layoutX="255.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color:#00A993;" text="Dodaj" textFill="WHITE" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="304.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -32,11 +32,11 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ChoiceBox fx:id="choiceBox" layoutX="-131.0" layoutY="1.0" prefHeight="25.0" prefWidth="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0" />
+                        <ChoiceBox fx:id="choiceBox" layoutX="-131.0" layoutY="1.0" prefHeight="27.0" prefWidth="265.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="29.0" prefWidth="357.0">
                      <children>
-                        <ChoiceBox fx:id="choiceBox2" layoutX="195.0" layoutY="2.0" prefHeight="25.0" prefWidth="275.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ChoiceBox fx:id="choiceBox2" layoutX="-4.0" layoutY="2.0" prefHeight="27.0" prefWidth="268.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children></AnchorPane>
               </items>
             </SplitPane>

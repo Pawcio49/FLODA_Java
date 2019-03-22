@@ -15,21 +15,21 @@
 
 <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="759.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewType.newType">
     <content>
-    <AnchorPane prefHeight="740.0" prefWidth="606.0">
+    <AnchorPane prefHeight="742.0" prefWidth="610.0">
        <children>
           <TextField fx:id="nazwa" layoutX="223.0" layoutY="45.0" promptText="Nazwa" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="61.0" />
           <TextField fx:id="www" layoutX="61.0" layoutY="639.0" prefHeight="25.0" prefWidth="313.0" promptText="www" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" />
-          <Label fx:id="information" alignment="CENTER" layoutX="229.0" layoutY="725.0" prefHeight="17.0" prefWidth="141.0" textFill="RED" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-          <Button fx:id="button" alignment="CENTER" defaultButton="true" layoutX="253.0" layoutY="688.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #62c145;" text="Dodaj" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
+          <Label fx:id="information" alignment="CENTER" layoutX="229.0" layoutY="725.0" prefHeight="17.0" prefWidth="141.0" textFill="#f8542B" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+          <Button fx:id="button" alignment="CENTER" defaultButton="true" layoutX="253.0" layoutY="688.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color:#00A993; -fx-text-fill: white;" text="Dodaj" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-          <Label alignment="CENTER" layoutX="210.0" layoutY="14.0" prefHeight="21.0" prefWidth="177.0" text="Dodaj nowy gatunek" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="207.0" AnchorPane.topAnchor="25.0">
+          <Label alignment="CENTER" layoutX="210.0" layoutY="14.0" prefHeight="21.0" prefWidth="177.0" text="Dodaj nowy gatunek" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
              <font>
                 <Font size="17.0" />
              </font>
           </Label>
-          <Label fx:id="Pod" alignment="CENTER" layoutX="230.0" layoutY="111.0" prefHeight="20.0" prefWidth="77.0" text="Podlewanie" textFill="#62c145" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="291.0">
+          <Label fx:id="Pod" alignment="CENTER" layoutX="230.0" layoutY="111.0" prefHeight="20.0" prefWidth="77.0" text="Podlewanie" textFill="#00A993" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="291.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
@@ -48,7 +48,7 @@
                    </children></AnchorPane>
             </items>
           </SplitPane>
-          <Label fx:id="Nas" alignment="CENTER" layoutX="208.0" layoutY="363.0" prefHeight="20.0" prefWidth="110.0" text="Nasłonecznienie" textFill="#62c145" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="260.0">
+          <Label fx:id="Nas" alignment="CENTER" layoutX="208.0" layoutY="363.0" prefHeight="20.0" prefWidth="110.0" text="Nasłonecznienie" textFill="#00A993" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="260.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
@@ -85,11 +85,11 @@
              </items>
           </SplitPane>
           <TextField fx:id="c_k_p" layoutX="65.0" layoutY="144.0" visible="false" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="167.0" />
-          <Label fx:id="Tem" alignment="CENTER" layoutX="235.0" layoutY="285.0" prefHeight="20.0" prefWidth="86.0" text="Temperatura" textFill="#62c145" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="282.0">
+          <Label fx:id="Tem" alignment="CENTER" layoutX="235.0" layoutY="285.0" prefHeight="20.0" prefWidth="73.0" text="Temperatura" textFill="#00A993" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="287.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
-          <Label fx:id="Wil" alignment="CENTER" layoutX="238.0" layoutY="533.0" prefHeight="20.0" prefWidth="76.0" text="Wilgotność" textFill="#62c145" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="292.0">
+          <Label fx:id="Wil" alignment="CENTER" layoutX="238.0" layoutY="533.0" prefHeight="20.0" prefWidth="76.0" text="Wilgotność" textFill="#00A993" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="292.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
@@ -107,11 +107,11 @@
             </RadioButton>
             <RadioButton fx:id="radioNas2" layoutX="64.0" layoutY="459.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="210.0" text="Predefiniowane ustawienia" toggleGroup="$naslonecznienie" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="324.0" />
             <ChoiceBox fx:id="choiceNas" layoutX="59.0" layoutY="488.0" prefWidth="150.0" visible="false" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" />
-            <Label fx:id="Lin" alignment="CENTER" layoutX="217.0" layoutY="611.0" prefHeight="20.0" prefWidth="120.0" text="Link do poradnika" textFill="#62c145" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="245.0">
+            <Label fx:id="Lin" alignment="CENTER" layoutX="217.0" layoutY="611.0" prefHeight="20.0" prefWidth="120.0" text="Link do poradnika" textFill="#00A993" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="245.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
-            <CheckBox fx:id="checkPod" alignment="CENTER" layoutX="324.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="29.0" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="259.0" />
+            <CheckBox fx:id="checkPod" alignment="CENTER" layoutX="324.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="27.0" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="264.0" />
             <CheckBox fx:id="checkTem" alignment="CENTER" layoutX="345.0" layoutY="285.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="28.0" AnchorPane.leftAnchor="319.0" AnchorPane.rightAnchor="251.0">
                <cursor>
                   <Cursor fx:constant="HAND" />

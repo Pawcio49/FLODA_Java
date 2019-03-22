@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="239.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gatunki.gatunki">
+   <content>
+      <AnchorPane fx:id="mainAnchor" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" layoutX="152.0" layoutY="37.0" prefHeight="20.0" prefWidth="289.0" text="Wybierz  gatunki, które mają być wyświetlane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <RadioButton fx:id="wszystkie" layoutX="54.0" layoutY="75.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" selected="true" text="Wszystkie">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ustaweinia" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="domyslne" layoutX="54.0" layoutY="110.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" text="Domyślne" toggleGroup="$ustaweinia" />
+            <RadioButton fx:id="dodane" layoutX="54.0" layoutY="145.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="287.0" text="Dodane przez użytkowników" toggleGroup="$ustaweinia" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

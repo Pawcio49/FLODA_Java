@@ -8,28 +8,38 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recover.Recover">
+<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: linear-gradient(to bottom, #007369,#00A993);" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recover.Recover">
    <children>
-      <TextField fx:id="email" layoutX="26.0" layoutY="49.0" prefHeight="25.0" prefWidth="224.0" promptText="E-mail" style="-fx-background-color: #1d7c00;" />
-      <Button fx:id="sendMail" defaultButton="true" layoutX="26.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #62c145;" text="Wyślij kod na podany adres e-mail" wrapText="true">
+      <TextField fx:id="email" layoutX="26.0" layoutY="49.0" prefHeight="25.0" prefWidth="224.0" promptText="E-mail" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+      <Button fx:id="sendMail" defaultButton="true" layoutX="26.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #03E3A9;" text="Wyślij kod" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <TextField fx:id="kod" layoutX="26.0" layoutY="167.0" prefHeight="25.0" prefWidth="224.0" promptText="Kod" style="-fx-background-color: #1d7c00;" visible="false" />
-      <PasswordField fx:id="newPass" layoutX="26.0" layoutY="267.0" prefHeight="25.0" prefWidth="224.0" promptText="Nowe hasło" style="-fx-background-color: #1d7c00;" visible="false" />
-      <PasswordField fx:id="verPass" layoutX="26.0" layoutY="300.0" prefHeight="25.0" prefWidth="224.0" promptText="Potwierdz haslo" style="-fx-background-color: #1d7c00;" visible="false" />
-      <Button fx:id="verify" layoutX="26.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #62c145;" text="Zweryfikuj kod" visible="false">
+      <TextField fx:id="kod" layoutX="26.0" layoutY="167.0" prefHeight="25.0" prefWidth="224.0" promptText="Kod" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" visible="false" />
+      <PasswordField fx:id="newPass" layoutX="26.0" layoutY="267.0" prefHeight="25.0" prefWidth="224.0" promptText="Nowe hasło" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" visible="false" />
+      <PasswordField fx:id="verPass" layoutX="26.0" layoutY="300.0" prefHeight="25.0" prefWidth="224.0" promptText="Potwierdz haslo" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" visible="false" />
+      <Button fx:id="verify" layoutX="26.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #03E3A9;" text="Zweryfikuj kod" visible="false">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="change" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #62c145;" text="Zmień hasło" visible="false">
+      <Button fx:id="change" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #03E3A9;" text="Zmień hasło" visible="false">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="comMail" alignment="TOP_LEFT" layoutX="26.0" layoutY="115.0" prefHeight="36.0" prefWidth="204.0" textFill="#ff2323" wrapText="true" />
-      <Label fx:id="comCode" layoutX="26.0" layoutY="233.0" textFill="#ff2323" />
-      <Label fx:id="comPass" layoutX="26.0" layoutY="366.0" prefHeight="17.0" prefWidth="224.0" textFill="#ff2323" />
+      <Label fx:id="comMail" alignment="TOP_LEFT" layoutX="26.0" layoutY="115.0" prefHeight="36.0" prefWidth="224.0" textFill="#e82222" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="comCode" layoutX="26.0" layoutY="233.0" textFill="#e82222">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="comPass" layoutX="26.0" layoutY="366.0" prefHeight="17.0" prefWidth="224.0" textFill="#e82222">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <ImageView fx:id="login" fitHeight="25.0" fitWidth="30.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../strzalka.png" />

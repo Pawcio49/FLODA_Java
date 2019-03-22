@@ -10,28 +10,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: #4d5056;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
+<AnchorPane prefHeight="407.0" prefWidth="276.0" style="-fx-background-color: linear-gradient(to bottom, #007369,#00A993);" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
     <children>
-        <TextField fx:id="txtnick" layoutX="27.0" layoutY="166.0" prefHeight="25.0" prefWidth="224.0" promptText="Nick" style="-fx-background-color: #1d7c00;" />
-        <Button fx:id="buttlog" defaultButton="true" layoutX="27.0" layoutY="232.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #62c145;" text="Zaloguj sie">
+        <TextField fx:id="txtnick" layoutX="27.0" layoutY="166.0" prefHeight="25.0" prefWidth="224.0" promptText="Nick" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+        <Button fx:id="buttlog" defaultButton="true" layoutX="27.0" layoutY="232.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #03E3A9;" text="Zaloguj sie" textFill="#003840">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-        <PasswordField fx:id="txtpasswd" layoutX="27.0" layoutY="198.0" prefHeight="25.0" prefWidth="224.0" promptText="Hasło" style="-fx-background-color: #1d7c00;" />
-        <ImageView fitHeight="73.0" fitWidth="200.0" layoutX="38.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+        <PasswordField fx:id="txtpasswd" layoutX="27.0" layoutY="198.0" prefHeight="25.0" prefWidth="224.0" promptText="Hasło" style="-fx-background-color: #fffdf3; -fx-text-fill: #003840;" />
+        <ImageView fitHeight="85.0" fitWidth="256.0" layoutX="17.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../logo.png" />
+                <Image url="@../logo_(bialy_napis).png" />
             </image>
         </ImageView>
-        <Button fx:id="buttreg" layoutX="162.0" layoutY="232.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #62c145;" text="Utwórz konto">
+        <Button fx:id="buttreg" layoutX="145.0" layoutY="232.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #03E3A9;" text="Utwórz konto" textFill="#003840">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="errorlabel" layoutX="26.0" layoutY="294.0" prefHeight="17.0" prefWidth="178.0" textFill="#ff2323" />
-      <Button fx:id="pass" layoutX="18.0" layoutY="265.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="129.0" style="-fx-background-color: #4d5056;" text="Nie pamiętasz hasła?" textFill="#62c145">
+      <Label fx:id="errorlabel" layoutX="28.0" layoutY="294.0" style="-fx-background-color: #f8542b;" text="dfsdfsddfs" textFill="#fffdf3">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="pass" layoutX="4.0" layoutY="265.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="168.0" style="-fx-background-color: rgba(0,0,0,0);" text="Nie pamiętasz hasła?" textFill="#fffdf3">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
+         </cursor>
+         <font>
+            <Font size="13.0" />
+         </font></Button>
       <ImageView fitHeight="73.0" fitWidth="98.0" layoutX="34.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../freelab.png" />
@@ -42,7 +48,7 @@
             <Image url="@../zsp.png" />
          </image>
       </ImageView>
-      <Label layoutX="129.0" layoutY="234.0" prefHeight="25.0" prefWidth="20.0" text="lub" textFill="#62c145">
+      <Label layoutX="120.0" layoutY="234.0" prefHeight="25.0" prefWidth="20.0" text="lub" textFill="#fffdf3">
          <font>
             <Font size="13.0" />
          </font>
