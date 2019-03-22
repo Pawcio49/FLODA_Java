@@ -79,6 +79,8 @@ public class Stat {
     Label info2;
     @FXML
     public Label soilInfo;
+    @FXML
+    Label gatunek;
 
     public Legend[] legend = new Legend[4];
     public Legend.LegendItem[] li = new Legend.LegendItem[20];
@@ -116,6 +118,8 @@ public class Stat {
          FlodaLog[] average= customerDAO.getFlodaAverage(10, who);
          String x=customerDAO.findID_from_base(who);
          Types type=customerDAO.getDateTypes(x);
+
+         gatunek.setText(type.getNazwa());
 
             number = plant[0].getNumber();
             number2 = average[0].getNumber();

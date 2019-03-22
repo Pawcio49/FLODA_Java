@@ -11,6 +11,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <ScrollPane fx:id="ScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="1041.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statistics.Stat">
             <content>
@@ -75,6 +76,11 @@
             </AnchorPane>
             <Label fx:id="info2" alignment="CENTER" layoutX="404.0" layoutY="57.0" prefHeight="43.0" prefWidth="178.0" textAlignment="CENTER" textFill="#f8542B" wrapText="true" AnchorPane.rightAnchor="34.0" />
             <Label fx:id="soilInfo" alignment="CENTER" layoutY="515.0" text="Roślina była ostatnio podlewana 2 dni temu, a należy ją podlewać co 1 dzień" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label fx:id="gatunek" alignment="CENTER" layoutY="11.0" prefHeight="0.0" prefWidth="598.0" text="asdasdasdadasda" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
             </children>
          <opaqueInsets>
             <Insets />
