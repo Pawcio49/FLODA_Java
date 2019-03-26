@@ -81,6 +81,8 @@ public class Stat {
     public Label soilInfo;
     @FXML
     Label gatunek;
+    @FXML
+    AnchorPane error;
 
     public Legend[] legend = new Legend[4];
     public Legend.LegendItem[] li = new Legend.LegendItem[20];
@@ -173,277 +175,93 @@ public class Stat {
             set9.getData().add(new XYChart.Data(average[i].getDate(), average[i].getSun()));
         }
 
-
-        try {
-            soilTime=phpSonda.getWatered(who);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        legend[0]= (Legend) temperatureChart.lookup(".chart-legend");
-        legend[1]= (Legend) soilChart.lookup(".chart-legend");
-        legend[2]= (Legend) humidityChart.lookup(".chart-legend");
-        legend[3]= (Legend) sunChart.lookup(".chart-legend");
-
-        if(type.getS_d_t()!=0 || type.getS_d_t_x()!=0) {
-            li[0] = new Legend.LegendItem("Poniżej " + type.getS_d_t() + "°C", new Rectangle(10, 6, Color.ORANGE));
-            li[1] = new Legend.LegendItem("Powyżej " + type.getS_d_t_x() + "°C", new Rectangle(10, 6, Color.web("#f8542B")));
-            li[2] = new Legend.LegendItem("Odpowiednia temperatura", new Rectangle(10, 6, Color.web("#00A993")));
-        }
-        else {
-            li[0]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-            li[1]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
-            li[2]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-        }
-
-        soilLegend=true;
-
-        if(type.getA_w_g()!=0) {
-            li[3] = new Legend.LegendItem("Poniżej " + type.getA_w_g() + "%", new Rectangle(10, 6, Color.ORANGE));
-            li[4] = new Legend.LegendItem("Odpowiednia wilgotność", new Rectangle(10, 6, Color.web("#00A993")));
-            li[5]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-        } else if(type.getC_k_p()!=0){
-            soilLegend = false;
-            soilChart.setLegendVisible(false);
-            soilChart.setPrefHeight(200);
-
-            String soilInfoText;
-            if(soilTime ==1)
-                soilInfoText="Roślina była podlewana 1 dzień od ostatniego pomiaru, ";
-            else if(soilTime==0)
-                soilInfoText="Roślina była podlewana w dzień ostatniego pomiaru, ";
-            else
-                soilInfoText=("Roślina była podlewana " + soilTime + " dni od ostatniego pomiaru, ");
-
-            if(type.getC_k_p()==1){
-                soilInfoText=soilInfoText+"a należy ją podlewać codziennie";
+        if(number!=0){
+            try {
+                soilTime=phpSonda.getWatered(who);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            else
-                soilInfoText=soilInfoText+"a należy ją podlewać co " + type.getC_k_p() + " dni";
 
-            soilInfo.setText(soilInfoText);
-            soilInfo.setVisible(true);
-        }
-        else {
-            li[3]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-            li[4]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
-            li[5]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-        }
+            legend[0]= (Legend) temperatureChart.lookup(".chart-legend");
+            legend[1]= (Legend) soilChart.lookup(".chart-legend");
+            legend[2]= (Legend) humidityChart.lookup(".chart-legend");
+            legend[3]= (Legend) sunChart.lookup(".chart-legend");
 
-        if(type.getS_d_w()!=0 || type.getS_d_w_x()!=0) {
-            li[6] = new Legend.LegendItem("Poniżej " + type.getS_d_w() + "%", new Rectangle(10, 6, Color.ORANGE));
-            li[7] = new Legend.LegendItem("Powyżej " + type.getS_d_w_x() + "%", new Rectangle(10, 6, Color.web("#f8542B")));
-            li[8] = new Legend.LegendItem("Odpowiednia wilgotność", new Rectangle(10, 6, Color.web("#00A993")));
-        }
-        else {
-            li[6]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-            li[7]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
-            li[8]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-        }
+            if(type.getS_d_t()!=0 || type.getS_d_t_x()!=0) {
+                li[0] = new Legend.LegendItem("Poniżej " + type.getS_d_t() + "°C", new Rectangle(10, 6, Color.ORANGE));
+                li[1] = new Legend.LegendItem("Powyżej " + type.getS_d_t_x() + "°C", new Rectangle(10, 6, Color.web("#f8542B")));
+                li[2] = new Legend.LegendItem("Odpowiednia temperatura", new Rectangle(10, 6, Color.web("#00A993")));
+            }
+            else {
+                li[0]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
+                li[1]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
+                li[2]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
+            }
 
-        if(type.getS_d_s()!=0 || type.getS_d_s_x()!=0) {
-            li[9] = new Legend.LegendItem("Poniżej " + type.getS_d_s() + " lux", new Rectangle(10, 6, Color.ORANGE));
-            li[10] = new Legend.LegendItem("Powyżej " + type.getS_d_s_x() + " lux", new Rectangle(10, 6, Color.web("#f8542B")));
-            li[11] = new Legend.LegendItem("Odpowiednie nasłonecznienie", new Rectangle(10, 6, Color.web("#00A993")));
-        }
-        else {
-            li[9]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-            li[10]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
-            li[11]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
-        }
+            soilLegend=true;
 
+            if(type.getA_w_g()!=0) {
+                li[3] = new Legend.LegendItem("Poniżej " + type.getA_w_g() + "%", new Rectangle(10, 6, Color.ORANGE));
+                li[4] = new Legend.LegendItem("Odpowiednia wilgotność", new Rectangle(10, 6, Color.web("#00A993")));
+                li[5]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
+            } else if(type.getC_k_p()!=0){
+                soilLegend = false;
+                soilChart.setLegendVisible(false);
+                soilChart.setPrefHeight(200);
 
-        checkEvent(null);
+                String soilInfoText;
+                if(soilTime ==1)
+                    soilInfoText="Roślina była podlewana 1 dzień od ostatniego pomiaru, ";
+                else if(soilTime==0)
+                    soilInfoText="Roślina była podlewana w dzień ostatniego pomiaru, ";
+                else
+                    soilInfoText=("Roślina była podlewana " + soilTime + " dni od ostatniego pomiaru, ");
 
-        if(type.getS_d_t()!=0 || type.getS_d_t_x()!=0){
-            for (int i=0; i<number2;i++){
-                Node n = temperatureChart.lookup(".data"+i+".chart-bar");
-                if(average[i].getTemperature()<type.getS_d_t()){
-                    n.setStyle("-fx-bar-fill: orange");
+                if(type.getC_k_p()==1){
+                    soilInfoText=soilInfoText+"a należy ją podlewać codziennie";
                 }
-                else if(average[i].getTemperature()>type.getS_d_t_x()) {
-                    n.setStyle("-fx-bar-fill: #f8542B");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
-            }
-        }
-        else {
-            for (int i=0; i<number2;i++){
-                Node n = temperatureChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
-            }
-        }
+                else
+                    soilInfoText=soilInfoText+"a należy ją podlewać co " + type.getC_k_p() + " dni";
 
-        if(type.getA_w_g()!=0) {
-            for (int i = 0; i < number2; i++) {
-                Node n = soilChart.lookup(".data" + i + ".chart-bar");
-                if (average[i].getSoil() < type.getA_w_g()) {
-                    n.setStyle("-fx-bar-fill: orange");
-                } else {
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
+                soilInfo.setText(soilInfoText);
+                soilInfo.setVisible(true);
             }
-        }
-        else if(type.getC_k_p()!=0 && type.getC_k_p()<soilTime){
-            for (int i=0; i<number2;i++){
-                Node n = soilChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill: #f8542B");
+            else {
+                li[3]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
+                li[4]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
+                li[5]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
             }
-        }
-        else if(type.getC_k_p()!=0 && type.getC_k_p()==soilTime) {
-            for (int i = 0; i < number2; i++) {
-                Node n = soilChart.lookup(".data" + i + ".chart-bar");
-                n.setStyle("-fx-bar-fill: orange");
-            }
-        }
-        else {
-            for (int i=0; i<number2;i++){
-                Node n = soilChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
-            }
-        }
 
-        if(type.getS_d_w()!=0 || type.getS_d_w_x()!=0){
-            for (int i=0; i<number2;i++){
-                Node n = humidityChart.lookup(".data"+i+".chart-bar");
-                if(average[i].getHumidity()<type.getS_d_w()){
-                    n.setStyle("-fx-bar-fill: orange");
-                }
-                else if(average[i].getHumidity()>type.getS_d_w_x()) {
-                    n.setStyle("-fx-bar-fill: #f8542B");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
+            if(type.getS_d_w()!=0 || type.getS_d_w_x()!=0) {
+                li[6] = new Legend.LegendItem("Poniżej " + type.getS_d_w() + "%", new Rectangle(10, 6, Color.ORANGE));
+                li[7] = new Legend.LegendItem("Powyżej " + type.getS_d_w_x() + "%", new Rectangle(10, 6, Color.web("#f8542B")));
+                li[8] = new Legend.LegendItem("Odpowiednia wilgotność", new Rectangle(10, 6, Color.web("#00A993")));
             }
-        }
-        else {
-            for (int i=0; i<number2;i++){
-                Node n = humidityChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
+            else {
+                li[6]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
+                li[7]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
+                li[8]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
             }
-        }
 
-        if(type.getS_d_s()!=0 || type.getS_d_s_x()!=0){
-            for (int i=0; i<number2;i++){
-                Node n = sunChart.lookup(".data"+i+".chart-bar");
-                if(average[i].getSun()<type.getS_d_s()){
-                    n.setStyle("-fx-bar-fill: orange");
-                }
-                else if(average[i].getSun()>type.getS_d_s_x()) {
-                    n.setStyle("-fx-bar-fill: #f8542B");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
+            if(type.getS_d_s()!=0 || type.getS_d_s_x()!=0) {
+                li[9] = new Legend.LegendItem("Poniżej " + type.getS_d_s() + " lux", new Rectangle(10, 6, Color.ORANGE));
+                li[10] = new Legend.LegendItem("Powyżej " + type.getS_d_s_x() + " lux", new Rectangle(10, 6, Color.web("#f8542B")));
+                li[11] = new Legend.LegendItem("Odpowiednie nasłonecznienie", new Rectangle(10, 6, Color.web("#00A993")));
             }
-        }
-        else {
-            for (int i=0; i<number2;i++){
-                Node n =sunChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
+            else {
+                li[9]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
+                li[10]=new Legend.LegendItem("Brak ustaleń", new Rectangle(10,6,Color.web("#00A993")));
+                li[11]=new Legend.LegendItem("", new Rectangle(0,0,Color.BLACK));
             }
-        }
-
-        checkBox.setSelected(false);
-        checkEvent(null);
-
-        if(type.getS_d_t()!=0 || type.getS_d_t_x()!=0){
-            for (int i=0; i<number;i++){
-                Node n = temperatureChart.lookup(".data"+i+".chart-bar");
-                if(plant[i].getTemperature()<type.getS_d_t()){
-                    n.setStyle("-fx-bar-fill: orange");
-                }
-                else if(plant[i].getTemperature()>type.getS_d_t_x()) {
-                    n.setStyle("-fx-bar-fill: #f8542B");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
-            }
-        }
-        else {
-            for (int i=0; i<number;i++){
-                Node n = temperatureChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
-            }
-        }
-
-        if(type.getA_w_g()!=0){
-            for (int i=0; i<number;i++){
-                Node n = soilChart.lookup(".data"+i+".chart-bar");
-                if(plant[i].getSoil()<type.getA_w_g()){
-                    n.setStyle("-fx-bar-fill: orange");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
-            }
-        }
-        else if(type.getC_k_p()!=0 && type.getC_k_p()<soilTime){
-            for (int i=0; i<number;i++){
-                Node n = soilChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill: #f8542B");
-            }
-        }
-        else if(type.getC_k_p()!=0 && type.getC_k_p()==soilTime){
-            for (int i=0; i<number;i++){
-                Node n = soilChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill: orange");
-            }
-        }
-        else {
-            for (int i=0; i<number;i++){
-                Node n = soilChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
-            }
-        }
-
-        if(type.getS_d_w()!=0 || type.getS_d_w_x()!=0){
-            for (int i=0; i<number;i++){
-                Node n = humidityChart.lookup(".data"+i+".chart-bar");
-                if(plant[i].getHumidity()<type.getS_d_w()){
-                    n.setStyle("-fx-bar-fill: orange");
-                }
-                else if(plant[i].getHumidity()>type.getS_d_w_x()) {
-                    n.setStyle("-fx-bar-fill: #f8542B");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
-            }
-        }
-        else {
-            for (int i=0; i<number;i++){
-                Node n = humidityChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
-            }
-        }
-
-        if(type.getS_d_s()!=0 || type.getS_d_s_x()!=0){
-            for (int i=0; i<number;i++){
-                Node n = sunChart.lookup(".data"+i+".chart-bar");
-                if(plant[i].getSun()<type.getS_d_s()){
-                    n.setStyle("-fx-bar-fill: orange");
-                }
-                else if(plant[i].getSun()>type.getS_d_s_x()) {
-                    n.setStyle("-fx-bar-fill: #f8542B");
-                }
-                else{
-                    n.setStyle("-fx-bar-fill:#00A993");
-                }
-            }
-        }
-        else {
-            for (int i=0; i<number;i++){
-                Node n =sunChart.lookup(".data"+i+".chart-bar");
-                n.setStyle("-fx-bar-fill:#00A993");
-            }
-        }
 
 
+            geChartColor(average, type, number2);
+
+            checkBox.setSelected(false);
+            geChartColor(plant, type, number);
+        }else{
+            error.setVisible(true);
+        }
 
         sondaSet.setOnAction(actionEvent -> {
 
@@ -517,6 +335,103 @@ public class Stat {
             }
         });
 
+    }
+
+    private void geChartColor(FlodaLog[] plant, Types type, int number) {
+        checkEvent(null);
+
+        if(type.getS_d_t()!=0 || type.getS_d_t_x()!=0){
+            for (int i = 0; i< number; i++){
+                Node n = temperatureChart.lookup(".data"+i+".chart-bar");
+                if(plant[i].getTemperature()<type.getS_d_t()){
+                    n.setStyle("-fx-bar-fill: orange");
+                }
+                else if(plant[i].getTemperature()>type.getS_d_t_x()) {
+                    n.setStyle("-fx-bar-fill: #f8542B");
+                }
+                else{
+                    n.setStyle("-fx-bar-fill:#00A993");
+                }
+            }
+        }
+        else {
+            for (int i = 0; i< number; i++){
+                Node n = temperatureChart.lookup(".data"+i+".chart-bar");
+                n.setStyle("-fx-bar-fill:#00A993");
+            }
+        }
+
+        if(type.getA_w_g()!=0){
+            for (int i = 0; i< number; i++){
+                Node n = soilChart.lookup(".data"+i+".chart-bar");
+                if(plant[i].getSoil()<type.getA_w_g()){
+                    n.setStyle("-fx-bar-fill: orange");
+                }
+                else{
+                    n.setStyle("-fx-bar-fill:#00A993");
+                }
+            }
+        }
+        else if(type.getC_k_p()!=0 && type.getC_k_p()<soilTime){
+            for (int i = 0; i< number; i++){
+                Node n = soilChart.lookup(".data"+i+".chart-bar");
+                n.setStyle("-fx-bar-fill: #f8542B");
+            }
+        }
+        else if(type.getC_k_p()!=0 && type.getC_k_p()==soilTime){
+            for (int i = 0; i< number; i++){
+                Node n = soilChart.lookup(".data"+i+".chart-bar");
+                n.setStyle("-fx-bar-fill: orange");
+            }
+        }
+        else {
+            for (int i = 0; i< number; i++){
+                Node n = soilChart.lookup(".data"+i+".chart-bar");
+                n.setStyle("-fx-bar-fill:#00A993");
+            }
+        }
+
+        if(type.getS_d_w()!=0 || type.getS_d_w_x()!=0){
+            for (int i = 0; i< number; i++){
+                Node n = humidityChart.lookup(".data"+i+".chart-bar");
+                if(plant[i].getHumidity()<type.getS_d_w()){
+                    n.setStyle("-fx-bar-fill: orange");
+                }
+                else if(plant[i].getHumidity()>type.getS_d_w_x()) {
+                    n.setStyle("-fx-bar-fill: #f8542B");
+                }
+                else{
+                    n.setStyle("-fx-bar-fill:#00A993");
+                }
+            }
+        }
+        else {
+            for (int i = 0; i< number; i++){
+                Node n = humidityChart.lookup(".data"+i+".chart-bar");
+                n.setStyle("-fx-bar-fill:#00A993");
+            }
+        }
+
+        if(type.getS_d_s()!=0 || type.getS_d_s_x()!=0){
+            for (int i = 0; i< number; i++){
+                Node n = sunChart.lookup(".data"+i+".chart-bar");
+                if(plant[i].getSun()<type.getS_d_s()){
+                    n.setStyle("-fx-bar-fill: orange");
+                }
+                else if(plant[i].getSun()>type.getS_d_s_x()) {
+                    n.setStyle("-fx-bar-fill: #f8542B");
+                }
+                else{
+                    n.setStyle("-fx-bar-fill:#00A993");
+                }
+            }
+        }
+        else {
+            for (int i = 0; i< number; i++){
+                Node n =sunChart.lookup(".data"+i+".chart-bar");
+                n.setStyle("-fx-bar-fill:#00A993");
+            }
+        }
     }
 
     public void checkEvent(ActionEvent event){

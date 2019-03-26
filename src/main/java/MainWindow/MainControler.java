@@ -211,11 +211,11 @@ public class MainControler {
 
         button.get(i).setText(Plant.get(i).getName());
         if(Plant.get(i).getNormpod()==1 && Plant.get(i).getNormwil()==1 && Plant.get(i).getNormsun()==1 && Plant.get(i).getNormtem()==1){
-            button.get(i).setStyle("-fx-background-color:#00A993; -fx-text-fill: white;");
+            button.get(i).setStyle("-fx-background-color:#00A993; -fx-text-fill: #f4f4f4;");
         }
 
         else{
-            button.get(i).setStyle("-fx-background-color: #f8542B; -fx-text-fill: white;");
+            button.get(i).setStyle("-fx-background-color: #f8542B; -fx-text-fill: #f4f4f4;");
         }
 
 
