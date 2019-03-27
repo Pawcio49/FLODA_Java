@@ -24,6 +24,11 @@ public class Info {
         this.blocked=false;
     }
 
+    public Info(boolean blocked) {
+        this.blocked=blocked;
+        this.Email="blocked";
+    }
+
     public Info(Info info) {
         this.ID=info.ID;
         this.Nick=info.Nick;

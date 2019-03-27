@@ -47,11 +47,11 @@
                                        <content>
                                           <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                              <children>
-                                                <Button fx:id="butUser" layoutX="68.0" layoutY="14.0" mnemonicParsing="false" text="Ustawienia użytkownika" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                                                <Button fx:id="newType" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" text="Utwórz nowy gatunek" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="145.0" />
-                                                <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" text="Dodaj roślinę" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
-                                                <Button fx:id="delbut" layoutX="45.0" layoutY="143.0" mnemonicParsing="false" text="Usuń roślinę" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
-                                                <Button fx:id="allTypes" mnemonicParsing="false" text="Dostępne gatunki" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
+                                                <Button fx:id="butUser" layoutX="68.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #007369;" text="Ustawienia użytkownika" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                                <Button fx:id="newType" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: #007369;" text="Utwórz nowy gatunek" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="145.0" />
+                                                <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" style="-fx-background-color: #00A993;" text="Dodaj roślinę" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                                                <Button fx:id="delbut" layoutX="45.0" layoutY="143.0" mnemonicParsing="false" style="-fx-background-color: #007369;" text="Usuń roślinę" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
+                                                <Button fx:id="allTypes" mnemonicParsing="false" style="-fx-background-color: #00A993;" text="Dostępne gatunki" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>

@@ -64,11 +64,18 @@ public class user {
         PhpModifyUser phpModifyUser=new PhpModifyUser();
 
         modify.setOnAction(actionEvent ->{
-            try {
-                info.setText(phpModifyUser.modifyUser(nick.getText(),name.getText(),surname.getText(),id));
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(!nick.getText().equals(dataOfUser.getNick()) || !name.getText().equals(dataOfUser.getName()) || !surname.getText().equals(dataOfUser.getSurname()))
+            {
+                try {
+                    info.setText(phpModifyUser.modifyUser(nick.getText(),name.getText(),surname.getText(),id));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+            else{
+                info.setText("Nie zmieniono żadnych danych");
+            }
+
         });
 
         commit.setOnAction(actionEvent ->{

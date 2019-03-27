@@ -74,8 +74,9 @@ public class JdbcCustomerDAO implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
             if (!rs.wasNull()) {
                 if (rs.next()) {
-                    if (rs.getBoolean("blocked") == true) {
-                        customer = new Info("blocked");
+                    if (rs.getBoolean("blocked")) {
+                        customer = new Info(true);
+
                     } else {
                         customer = new Info(
                                 rs.getInt("ID"),
@@ -187,7 +188,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
 
 
     public FlodaLog[] getFlodaLog(int line, int who) {
-        String sql = "SELECT nr_floda, temperature, soil, humidity, sun, date FROM floda_log WHERE nr_floda = " + who + " order by date";
+        String sql = "(SELECT nr_floda, temperature, soil, humidity, sun, date FROM floda_log WHERE nr_floda = " + who + " order by date desc limit 10) order by date";
 
         Connection conn = null;
 

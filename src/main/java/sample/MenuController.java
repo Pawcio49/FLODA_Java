@@ -44,6 +44,7 @@ public class MenuController extends Thread {
                 if (!txtnick.getText().isEmpty() && !txtpasswd.getText().isEmpty()) {
                     CustomerDAO customerDAO = (CustomerDAO) applicationContext.getBean("CustomerDAO");
                     Info dd = new Info(customerDAO.findByCustomerId(txtnick.getText(), txtpasswd.getText()));
+
                     if (dd.getEmail().equals("erro")) {
 
                         errorlabel.setText("Nieprawidłowy nick lub hasło");
@@ -53,6 +54,7 @@ public class MenuController extends Thread {
 
                     } else if (dd.getblocked()) {
                         errorlabel.setText("Twoje konto jest zablokowane");
+
 
                     } else {
                         try {
