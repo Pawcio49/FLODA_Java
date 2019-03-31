@@ -28,7 +28,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="comMail" alignment="TOP_LEFT" layoutX="26.0" layoutY="115.0" prefHeight="36.0" prefWidth="224.0" textFill="#e82222" wrapText="true">
+      <Label fx:id="comMail" alignment="TOP_LEFT" layoutX="26.0" layoutY="115.0" prefHeight="43.0" prefWidth="224.0" textFill="#e82222" wrapText="true">
          <font>
             <Font size="14.0" />
          </font></Label>
