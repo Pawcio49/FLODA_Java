@@ -16,6 +16,6 @@ public class Web {
     @FXML
     void initialize(){
         WebEngine engine = webView.getEngine();
-        engine.load("http://www.pawdop.cba.pl");
+        engine.load("http://serwer1727017.home.pl/2ti/floda/web/wp");
     }
 }

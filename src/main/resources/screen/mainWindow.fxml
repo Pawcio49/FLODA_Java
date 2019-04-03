@@ -28,6 +28,11 @@
                <items>
                   <MenuItem fx:id="refresh" mnemonicParsing="false" text="Odśwież" />
                </items></Menu>
+            <Menu mnemonicParsing="false" text="Informacje">
+               <items>
+                  <MenuItem fx:id="about" mnemonicParsing="false" text="O programie" />
+               </items>
+            </Menu>
         </menus>
          <opaqueInsets>
             <Insets />
@@ -52,6 +57,7 @@
                                                 <Button fx:id="addbut" layoutX="24.0" layoutY="110.0" mnemonicParsing="false" style="-fx-background-color: #00A993;" text="Dodaj roślinę" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
                                                 <Button fx:id="delbut" layoutX="45.0" layoutY="143.0" mnemonicParsing="false" style="-fx-background-color: #007369;" text="Usuń roślinę" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="75.0" />
                                                 <Button fx:id="allTypes" mnemonicParsing="false" style="-fx-background-color: #00A993;" text="Dostępne gatunki" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="110.0" />
+                                                <Button fx:id="web" layoutX="33.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: #00A993;" text="Strona internetowa" textFill="#f4f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="180.0" />
                                              </children>
                                           </AnchorPane>
                                        </content>

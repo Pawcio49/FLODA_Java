@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="About.About">
+   <children>
+      <Label layoutX="81.0" layoutY="87.0" prefHeight="90.0" prefWidth="438.0" text="Aplikacja komputerowa służy do przeglądania pomiarów wykonanych przez sondę i porównywania ich z danymi kontrolnymi, które użytkownik wybrał za optymalne. Mogą to być dane wprowadzone przez autorów aplikacji lub dowolnego konsumenta." textAlignment="JUSTIFY" wrapText="true" />
+      <Label layoutX="81.0" layoutY="171.0" prefHeight="90.0" prefWidth="438.0" text="Program można wykorzystać zarówno w dużych firmach, jak i w domu. Zawiera odpowiednie zabezpieczenia takie jak login i hasło, które można odzyskać przy pomocy adresu e-mail. Użytkownik może dzięki temu zalogować się do aplikacji z dowolnego komputera podłączonego do internetu. " textAlignment="JUSTIFY" wrapText="true" />
+      <ImageView fitHeight="85.0" fitWidth="256.0" layoutX="172.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo_(czarny_napis).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="81.0" layoutY="282.0" prefHeight="25.0" prefWidth="129.0" text="Autor aplikacji:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="306.0" text="Paweł Dopierała">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="285.0" text="E-mail kontaktowy:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="308.0" text="pawel.dopierala4@gmail.com">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

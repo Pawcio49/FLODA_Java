@@ -61,6 +61,10 @@ public class MainControler {
     Button delbut;
     @FXML
     Button allTypes;
+    @FXML
+    Button web;
+    @FXML
+    MenuItem about;
 
     @FXML
     void initialize() throws IOException {
@@ -101,6 +105,28 @@ public class MainControler {
                 Stage window = (Stage) addbut.getScene().getWindow();
                 window.close();
             } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        web.setOnAction(actionEvent -> {
+            try {
+                Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/Web.fxml"));
+                Tab tb2 = new Tab("Strona internetowa", node2);
+                TAB.getTabs().add(tb2);
+                TAB.getSelectionModel().select(tb2);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        about.setOnAction(actionEvent -> {
+            try {
+                Node node2 = FXMLLoader.load(getClass().getClassLoader().getResource("screen/about.fxml"));
+                Tab tb2 = new Tab("O programie", node2);
+                TAB.getTabs().add(tb2);
+                TAB.getSelectionModel().select(tb2);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         });
