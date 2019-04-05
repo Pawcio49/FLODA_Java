@@ -252,8 +252,8 @@ public class MainControler {
             Node node4 = null;
             try {
 
-                PrintWriter save = new PrintWriter("Plant_ID_Sondy.txt");
-                save.println(Plant.get(w).getId_sondy());
+                PrintWriter save = new PrintWriter("Plant_ID.txt");
+                save.println(Plant.get(w).getId());
                 save.close();
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("screen/statistics.fxml"));
                 Tab tab = new Tab(Plant.get(w).getName(),root);

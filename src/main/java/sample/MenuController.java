@@ -55,7 +55,8 @@ public class MenuController extends Thread {
                     } else if (dd.getblocked()) {
                         errorlabel.setText("Twoje konto jest zablokowane");
 
-
+                    } else if (!dd.getActivated()) {
+                        errorlabel.setText("Twoje konto jest nieaktywne");
                     } else {
                         try {
                             mainWindow = new MainWindow(dd);

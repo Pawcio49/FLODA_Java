@@ -9,8 +9,11 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 
 public class phpSonda {
     private static HttpURLConnection con;
@@ -120,10 +123,18 @@ public class phpSonda {
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
+            //String x = String.valueOf(LocalTime.now());
+            Calendar cal = Calendar.getInstance();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+
             LocalDateTime dateTime1= LocalDateTime.parse(watered, formatter);
-            LocalDateTime dateTime2= LocalDateTime.parse(date, formatter);
+            LocalDateTime dateTime2= LocalDateTime.parse(sdf.format(cal.getTime()), formatter);
+
 
             int diffInDays = (int) java.time.Duration.between(dateTime1, dateTime2).toDays();
+
             return diffInDays;
 
         } finally {

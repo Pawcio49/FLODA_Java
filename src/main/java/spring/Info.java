@@ -9,7 +9,9 @@ public class Info {
     String passwd;
     Boolean blocked;
     Boolean su;
-    public Info(int ID, String Nick, String Name, String Surname, String Email, String passwd, boolean blocked,boolean su) {
+    Boolean activated;
+
+    public Info(int ID, String Nick, String Name, String Surname, String Email, String passwd, boolean blocked,boolean su,Boolean activated) {
         this.ID=ID;
         this.Nick=Nick;
         this.Name=Name;
@@ -18,6 +20,7 @@ public class Info {
         this.passwd=passwd;
         this.su=su;
         this.blocked=blocked;
+        this.activated=activated;
     }
     public Info(String Email) {
         this.Email=Email;
@@ -38,6 +41,7 @@ public class Info {
         this.passwd=info.passwd;
         this.su=info.su;
         this.blocked=info.blocked;
+        this.activated=info.activated;
 
     }
 
@@ -70,5 +74,9 @@ public class Info {
     }
     public boolean getsu() {
         return su;
+    }
+
+    public Boolean getActivated() {
+        return activated;
     }
 }

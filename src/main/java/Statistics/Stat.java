@@ -101,7 +101,7 @@ public class Stat {
         phpSonda phpSonda=new phpSonda();
 
         File file =
-                new File("Plant_ID_Sondy.txt");
+                new File("Plant_ID.txt");
         Scanner sc = null;
         try {
             sc = new Scanner(file);
@@ -115,10 +115,13 @@ public class Stat {
         sc.close();
         file.delete();
 
+        String x=customerDAO.findID_from_base(who);
 
-         FlodaLog[] plant =  customerDAO.getFlodaLog(10, who);
-         FlodaLog[] average= customerDAO.getFlodaAverage(10, who);
-         String x=customerDAO.findID_from_base(who);
+        who=customerDAO.findID_sondy(who);
+
+        FlodaLog[] plant =  customerDAO.getFlodaLog(10, who);
+        FlodaLog[] average= customerDAO.getFlodaAverage(10, who);
+
          Types type=customerDAO.getDateTypes(x);
 
          gatunek.setText(type.getNazwa());
@@ -211,11 +214,11 @@ public class Stat {
 
                 String soilInfoText;
                 if(soilTime ==1)
-                    soilInfoText="Roślina była podlewana 1 dzień od ostatniego pomiaru, ";
+                    soilInfoText="Roślina była wczoraj podlewana, ";
                 else if(soilTime==0)
-                    soilInfoText="Roślina była podlewana w dzień ostatniego pomiaru, ";
+                    soilInfoText="Roślina była dzisiaj podlewana, ";
                 else
-                    soilInfoText=("Roślina była podlewana " + soilTime + " dni od ostatniego pomiaru, ");
+                    soilInfoText=("Roślina była podlewana " + soilTime + " dni temu, ");
 
                 if(type.getC_k_p()==1){
                     soilInfoText=soilInfoText+"a należy ją podlewać codziennie";

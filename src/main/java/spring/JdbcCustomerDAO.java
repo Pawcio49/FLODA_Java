@@ -86,7 +86,8 @@ public class JdbcCustomerDAO implements CustomerDAO {
                                 rs.getString("Email"),
                                 rs.getString("passwd"),
                                 rs.getBoolean("blocked"),
-                                rs.getBoolean("su")
+                                rs.getBoolean("su"),
+                                rs.getBoolean("activated")
                         );
                     }
 
@@ -489,7 +490,7 @@ public class JdbcCustomerDAO implements CustomerDAO {
     }
 
     public String findID_from_base(int who) {
-        String sql = "SELECT ID_from_base FROM FLODA_connections WHERE id_sondy = " + who;
+        String sql = "SELECT ID_from_base FROM FLODA_connections WHERE ID = " + who;
 
         Connection conn = null;
 
@@ -504,6 +505,36 @@ public class JdbcCustomerDAO implements CustomerDAO {
             rs.close();
             ps.close();
             return x;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+
+    }
+
+    public int findID_sondy(int who) {
+        String sql = "SELECT ID_sondy FROM FLODA_connections WHERE ID = " + who;
+
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+            String x=rs.getString("ID_sondy");
+
+            rs.close();
+            ps.close();
+            return Integer.parseInt(x);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -64,7 +64,6 @@ public class gatunki {
             defaultAnchor.setVisible(true);
             addedAnchor.setVisible(true);
             mainAnchor.setTopAnchor(addedAnchor,defaultAnchor.getHeight()+193.0);
-            System.out.println(defaultAnchor.getHeight());
         });
 
         domyslne.setOnAction(actionEvent -> {

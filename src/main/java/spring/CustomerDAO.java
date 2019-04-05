@@ -21,4 +21,5 @@ public interface CustomerDAO {
     public ArrayList<Types> getAddedTypes();
     public String findID_from_base(int who);
     public Types getDateTypes(String id);
+    public int findID_sondy(int who);
 }

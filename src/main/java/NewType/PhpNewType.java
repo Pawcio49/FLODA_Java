@@ -12,6 +12,8 @@ public class PhpNewType {
     public String newType(String nazwa, String id_autora, String c_k_p, String codePod, String minNas, String maxNas, String codeNas, String minTem, String maxTem, String minWil, String maxWil, String www) throws MalformedURLException,
             ProtocolException, IOException {
 
+        nazwa=nazwa.replace(" ","!");
+
         StringBuilder link = new StringBuilder("http://serwer1727017.home.pl/2ti/floda/add/add_genre.php?name="+nazwa+"&autor="+id_autora+"&podlewanie="+ c_k_p +"&naslonecznieniemin="+ minNas +"&naslonecznieniemax="+ maxNas +"&tempmin="+ minTem +"&tempmax="+ maxTem +"&wilgmin="+ minWil +"&wilgmax="+ maxWil +"&www="+www);
 
         if(!codePod.equals("")){
@@ -21,7 +23,6 @@ public class PhpNewType {
         if(!codeNas.equals("")){
             link.append("&naslonecznienieZ=").append(codeNas);
         }
-        System.out.println(link.toString());
 
         URL url = new URL(link.toString());
         URLConnection connection = url.openConnection();
