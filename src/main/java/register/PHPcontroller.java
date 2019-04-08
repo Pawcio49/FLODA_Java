@@ -44,11 +44,16 @@ public class PHPcontroller {
 
                 while ((line = in.readLine()) != null) {
                     content.append(line);
-                    content.append(System.lineSeparator());
                 }
             }
 
-            return content.toString();
+            if(content.toString().equals("1")){
+                return "Wysłano e-maila na podany adres";
+            }
+            else{
+                return content.toString();
+            }
+
 
         } finally {
 
